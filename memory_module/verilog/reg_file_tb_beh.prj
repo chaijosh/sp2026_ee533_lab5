@@ -1,0 +1,3 @@
+verilog work "reg_file_64x32.v"
+verilog work "reg_file_tb.v"
+verilog work "C:/Xilinx/10.1/ISE/verilog/src/glbl.v"

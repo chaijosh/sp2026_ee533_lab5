@@ -1,0 +1,21 @@
+Determining compilation order of HDL files
+Analyzing Verilog file reg_file_64x32.v
+Analyzing Verilog file reg_file_tb.v
+Analyzing Verilog file C:/Xilinx/10.1/ISE/verilog/src/glbl.v
+Saving Verilog parse-tree work.reg_file_64x32 into
+z:/ee533/lab5_sp26/memory_module/verilog/isim/work/reg_file_64x32.sdb
+Saving Verilog parse-tree work.reg_file_tb into
+z:/ee533/lab5_sp26/memory_module/verilog/isim/work/reg_file_tb.sdb
+Saving Verilog parse-tree work.glbl into
+z:/ee533/lab5_sp26/memory_module/verilog/isim/work/glbl.sdb
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 54152 Kb
+Fuse CPU Usage: 140 ms
+Compiling module glbl
+Compiling module reg_file_64x32
+Compiling module reg_file_tb
+Compiled 3 Verilog Units
+Built simulation executable reg_file_tb_isim_beh.exe
+Fuse Memory Usage: 55436 Kb
+Fuse CPU Usage: 187 ms

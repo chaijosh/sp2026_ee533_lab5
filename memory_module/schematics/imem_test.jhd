@@ -1,0 +1,3 @@
+MODULE imem_test
+	SUBMODULE instr_mem_32x512
+		INSTANCE XLXI_1

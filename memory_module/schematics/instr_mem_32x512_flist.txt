@@ -1,0 +1,12 @@
+# Output products list for <instr_mem_32x512>
+instr_mem_32x512.asy
+instr_mem_32x512.mif
+instr_mem_32x512.ngc
+instr_mem_32x512.sym
+instr_mem_32x512.v
+instr_mem_32x512.veo
+instr_mem_32x512.vhd
+instr_mem_32x512.vho
+instr_mem_32x512.xco
+instr_mem_32x512_flist.txt
+instr_mem_32x512_xmdf.tcl

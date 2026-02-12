@@ -1,0 +1,103 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 10.1
+//  \   \         Application : ISE
+//  /   /         Filename : dchche_tb.tfw
+// /___/   /\     Timestamp : Wed Feb 11 20:44:43 2026
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: dchche_tb
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module dchche_tb;
+    reg [7:0] addr = 8'b00000000;
+    reg clk = 1'b0;
+    reg MemRead = 1'b0;
+    reg MemWrite = 1'b0;
+    reg [63:0] write_data = 64'b0000000000000000000000000000000000000000000000000000000000000000;
+    wire [63:0] read_data;
+
+    parameter PERIOD = 200;
+    parameter real DUTY_CYCLE = 0.5;
+    parameter OFFSET = 100;
+
+    initial    // Clock process for clk
+    begin
+        #OFFSET;
+        forever
+        begin
+            clk = 1'b0;
+            #(PERIOD-(PERIOD*DUTY_CYCLE)) clk = 1'b1;
+            #(PERIOD*DUTY_CYCLE);
+        end
+    end
+
+    dcache_test UUT (
+        .addr(addr),
+        .clk(clk),
+        .MemRead(MemRead),
+        .MemWrite(MemWrite),
+        .write_data(write_data),
+        .read_data(read_data));
+
+    initial begin
+        // -------------  Current Time:  185ns
+        #185;
+        MemWrite = 1'b1;
+        addr = 8'b00001010;
+        write_data = 64'b0000000000000000000000000000000000000000000000000000000000100101;
+        // -------------------------------------
+        // -------------  Current Time:  385ns
+        #200;
+        MemRead = 1'b1;
+        MemWrite = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  585ns
+        #200;
+        MemRead = 1'b0;
+        MemWrite = 1'b1;
+        addr = 8'b00010000;
+        write_data = 64'b0000000000000000000000000000000000000000000000000000000010010111;
+        // -------------------------------------
+        // -------------  Current Time:  785ns
+        #200;
+        MemRead = 1'b1;
+        MemWrite = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  985ns
+        #200;
+        addr = 8'b00000000;
+        // -------------------------------------
+        // -------------  Current Time:  1185ns
+        #200;
+        addr = 8'b00000001;
+        // -------------------------------------
+        // -------------  Current Time:  1385ns
+        #200;
+        addr = 8'b00000010;
+        // -------------------------------------
+        // -------------  Current Time:  1585ns
+        #200;
+        MemRead = 1'b0;
+        MemWrite = 1'b1;
+        addr = 8'b00000000;
+        write_data = 64'b1010010110100101110111101010110101011010010110101011111011101111;
+        // -------------------------------------
+        // -------------  Current Time:  1785ns
+        #200;
+        MemRead = 1'b1;
+        MemWrite = 1'b0;
+        // -------------------------------------
+    end
+
+endmodule
+

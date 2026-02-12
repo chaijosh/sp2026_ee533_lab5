@@ -1,0 +1,44 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 10.1
+//  \   \         Application : sch2verilog
+//  /   /         Filename : imem_test.vf
+// /___/   /\     Timestamp : 02/11/2026 20:01:22
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\10.1\ISE\bin\nt\unwrapped\sch2verilog.exe -intstyle ise -family virtex2p -w Z:/EE533/lab5_sp26/memory_module/schematics/imem_test.sch imem_test.vf
+//Design Name: imem_test
+//Device: virtex2p
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module imem_test(clk, 
+                 din, 
+                 pc, 
+                 write_en, 
+                 instruction);
+
+    input clk;
+    input [31:0] din;
+    input [8:0] pc;
+    input write_en;
+   output [31:0] instruction;
+   
+   wire XLXN_7;
+   
+   instr_mem_32x512 XLXI_1 (.addr(pc[8:0]), 
+                            .clk(clk), 
+                            .din(din[31:0]), 
+                            .en(XLXN_7), 
+                            .we(write_en), 
+                            .dout(instruction[31:0]));
+   VCC XLXI_2 (.P(XLXN_7));
+endmodule

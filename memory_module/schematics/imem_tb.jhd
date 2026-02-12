@@ -1,0 +1,3 @@
+MODULE imem_tb
+SUBMODULE imem_test
+INSTANCE UUT

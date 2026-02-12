@@ -1,0 +1,4 @@
+verilog work "data_mem_64_256.v"
+verilog work "dcache_test.vf"
+verilog work "dchche_tb.tfw"
+verilog work "C:/Xilinx/10.1/ISE/verilog/src/glbl.v"

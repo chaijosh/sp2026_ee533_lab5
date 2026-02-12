@@ -1,0 +1,4 @@
+verilog work "instr_mem_32x512.v"
+verilog work "imem_test.vf"
+verilog work "imem_tb.tfw"
+verilog work "C:/Xilinx/10.1/ISE/verilog/src/glbl.v"

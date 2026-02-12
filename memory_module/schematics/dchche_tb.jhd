@@ -1,0 +1,3 @@
+MODULE dchche_tb
+SUBMODULE dcache_test
+INSTANCE UUT

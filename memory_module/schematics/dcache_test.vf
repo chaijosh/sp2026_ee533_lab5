@@ -1,0 +1,56 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 10.1
+//  \   \         Application : sch2verilog
+//  /   /         Filename : dcache_test.vf
+// /___/   /\     Timestamp : 02/11/2026 20:46:05
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\10.1\ISE\bin\nt\unwrapped\sch2verilog.exe -intstyle ise -family virtex2p -w Z:/EE533/lab5_sp26/memory_module/schematics/dcache_test.sch dcache_test.vf
+//Design Name: dcache_test
+//Device: virtex2p
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module dcache_test(addr, 
+                   clk, 
+                   MemRead, 
+                   MemWrite, 
+                   write_data, 
+                   read_data);
+
+    input [7:0] addr;
+    input clk;
+    input MemRead;
+    input MemWrite;
+    input [63:0] write_data;
+   output [63:0] read_data;
+   
+   wire XLXN_18;
+   wire XLXN_21;
+   
+   data_mem_64_256 XLXI_2 (.addra(addr[7:0]), 
+                           .addrb(), 
+                           .clka(clk), 
+                           .clkb(XLXN_21), 
+                           .dina(write_data[63:0]), 
+                           .dinb(), 
+                           .ena(XLXN_18), 
+                           .enb(XLXN_21), 
+                           .wea(MemWrite), 
+                           .web(XLXN_21), 
+                           .douta(read_data[63:0]), 
+                           .doutb());
+   GND XLXI_3 (.G(XLXN_21));
+   OR2 XLXI_6 (.I0(MemRead), 
+               .I1(MemWrite), 
+               .O(XLXN_18));
+endmodule

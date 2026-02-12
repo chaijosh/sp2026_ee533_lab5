@@ -1,0 +1,44 @@
+Command line:
+   ./dchche_tb_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  1356
+
+Wed Feb 11 20:46:11 2026
+
+Total Line Count : 599
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 141.509 Meg
+
+ Total Signals          : 81
+ Total Nets             : 461
+ Total Signal Drivers   : 44
+ Total Blocks           : 13
+ Total Primitive Blocks : 4
+ Total Processes        : 93
+ Total Traceable Variables  : 206
+ Total Scalar Nets and Variables : 38986
+ntrace select -o on -n /dchche_tb/clk 
+ntrace select -o on -n /dchche_tb/addr 
+ntrace select -o on -n /dchche_tb/MemRead 
+ntrace select -o on -n /dchche_tb/MemWrite 
+ntrace select -o on -n /dchche_tb/write_data 
+ntrace select -o on -n /dchche_tb/read_data 
+ntrace select -o on -n /dchche_tb/PERIOD 
+ntrace select -o on -n /dchche_tb/DUTY_CYCLE 
+ntrace select -o on -n /dchche_tb/OFFSET 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+isimrun 1000 ns 
+isimrun 1000 ns 
+
+ Total Simulation Time: 0.15625 sec
+
+ Current Memory Usage: 152.007 Meg
+
+Wed Feb 11 20:48:44 2026
+
