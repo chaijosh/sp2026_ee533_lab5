@@ -1,0 +1,9 @@
+sch2verilog -intstyle ise -family virtex2p   -w "Z:/EE533/lab5_sp26/pipeline_cpu/schematics/cpu_pipeline_schematic.sch" cpu_pipeline_schematic.vf
+sch2verilog -intstyle ise -family virtex2p   -w "Z:/EE533/lab5_sp26/pipeline_cpu/schematics/cpu_pipeline_schematic.sch" cpu_pipeline_schematic.vf
+sch2verilog -intstyle ise -family virtex2p   -w "Z:/EE533/lab5_sp26/pipeline_cpu/schematics/cpu_pipeline_schematic.sch" cpu_pipeline_schematic.vf
+sch2verilog -intstyle ise -family virtex2p   -w "Z:/EE533/lab5_sp26/pipeline_cpu/schematics/cpu_pipeline_schematic.sch" cpu_pipeline_schematic.vf
+sch2verilog -intstyle ise -family virtex2p   -w "Z:/EE533/lab5_sp26/pipeline_cpu/schematics/cpu_pipeline_schematic.sch" cpu_pipeline_schematic.vf
+sch2verilog -intstyle ise -family virtex2p   -w "Z:/EE533/lab5_sp26/pipeline_cpu/schematics/cpu_pipeline_schematic.sch" cpu_pipeline_schematic.vf
+sch2verilog -intstyle ise -family virtex2p   -w "Z:/EE533/lab5_sp26/pipeline_cpu/schematics/cpu_pipeline_schematic.sch" cpu_pipeline_schematic.vf
+sch2verilog -intstyle ise -family virtex2p   -w "Z:/EE533/lab5_sp26/pipeline_cpu/schematics/cpu_pipeline_schematic.sch" cpu_pipeline_schematic.vf
+sch2verilog -intstyle ise -family virtex2p   -w "Z:/EE533/lab5_sp26/pipeline_cpu/schematics/cpu_pipeline_schematic.sch" cpu_pipeline_schematic.vf

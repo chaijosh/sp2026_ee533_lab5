@@ -54,14 +54,14 @@ module reg_file_tb;
 	initial begin
 		// Initialize Inputs
 		clk = 0;
-		r0addr = 0;
-		r1addr = 0;
+		r0addr = 5'h5;
+		r1addr = 5'h10;
 		waddr = 0;
 		wdata = 0;
 		wena = 0;
 
 		// Wait 100 ns for global reset to finish
-		#100;
+		#1000;
         
 		// Add stimulus here
 		r0addr = 5'h0;

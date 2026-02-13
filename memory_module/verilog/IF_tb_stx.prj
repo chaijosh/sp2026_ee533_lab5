@@ -1,4 +1,0 @@
-verilog isim_temp "instr_mem_32x512.v"
-verilog isim_temp "IF_stage.v"
-verilog isim_temp "IF_tb.v"
-verilog isim_temp "C:/Xilinx/10.1/ISE/verilog/src/glbl.v"

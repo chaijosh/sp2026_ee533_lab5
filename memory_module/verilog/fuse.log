@@ -11,11 +11,11 @@ z:/ee533/lab5_sp26/memory_module/verilog/isim/work/glbl.sdb
 Starting static elaboration
 Completed static elaboration
 Fuse Memory Usage: 54152 Kb
-Fuse CPU Usage: 140 ms
+Fuse CPU Usage: 139 ms
 Compiling module glbl
 Compiling module reg_file_64x32
 Compiling module reg_file_tb
 Compiled 3 Verilog Units
 Built simulation executable reg_file_tb_isim_beh.exe
 Fuse Memory Usage: 55436 Kb
-Fuse CPU Usage: 187 ms
+Fuse CPU Usage: 186 ms

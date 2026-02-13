@@ -1,0 +1,3 @@
+MODULE pipeline_reg_IFID
+	SUBMODULE dff_32b
+		INSTANCE XLXI_1

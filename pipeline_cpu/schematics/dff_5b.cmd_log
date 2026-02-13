@@ -1,0 +1,1 @@
+sch2verilog -intstyle ise -family virtex2p   -w "Z:/EE533/lab5_sp26/pipeline_cpu/schematics/dff_5b.sch" dff_5b.vf

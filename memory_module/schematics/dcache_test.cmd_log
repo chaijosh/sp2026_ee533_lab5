@@ -2,3 +2,4 @@ sch2verilog -intstyle ise -family virtex2p   -w "Z:/EE533/lab5_sp26/memory_modul
 sch2verilog -intstyle ise -family virtex2p   -w "Z:/EE533/lab5_sp26/memory_module/schematics/dcache_test.sch" dcache_test.vf
 sch2verilog -intstyle ise -family virtex2p   -w "Z:/EE533/lab5_sp26/memory_module/schematics/dcache_test.sch" dcache_test.vf
 sch2verilog -intstyle ise -family virtex2p   -w "Z:/EE533/lab5_sp26/memory_module/schematics/dcache_test.sch" dcache_test.vf
+sch2verilog -intstyle ise -family virtex2p   -w "Z:/EE533/lab5_sp26/memory_module/schematics/dcache_test.sch" dcache_test.vf

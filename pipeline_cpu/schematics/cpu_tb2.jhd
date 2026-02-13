@@ -1,0 +1,3 @@
+MODULE cpu_tb2
+SUBMODULE cpu_pipeline_schematic
+INSTANCE UUT

@@ -9,8 +9,6 @@ BEGIN SCHEMATIC
         SIGNAL pc(8:0)
         SIGNAL din(31:0)
         SIGNAL write_en
-        BEGIN SIGNAL XLXN_4
-        END SIGNAL
         SIGNAL clk
         SIGNAL instruction(31:0)
         SIGNAL XLXN_7

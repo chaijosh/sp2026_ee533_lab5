@@ -1,0 +1,3 @@
+select figure at 6407 1380 39 -branches -sn=1
+select figure at 6397 1371 39 -branches -sn=1
+select figure at 6407 1380 39 -branches -all -sn=1

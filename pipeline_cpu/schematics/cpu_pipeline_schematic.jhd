@@ -1,0 +1,19 @@
+MODULE cpu_pipeline_schematic
+	SUBMODULE instr_mem_32x512
+		INSTANCE ICache_32x512
+	SUBMODULE PC_reg_9bit
+		INSTANCE PC_register
+	SUBMODULE incrementer_pc
+		INSTANCE PC_incrementer
+	SUBMODULE reg_file_64x32
+		INSTANCE register_file
+	SUBMODULE data_mem_64_256
+		INSTANCE DCache_64x256
+	SUBMODULE dff_5b
+		INSTANCE pipeline_stage_MEM_WB1
+	SUBMODULE pipeline_reg_IFID
+		INSTANCE pipeline_stage_IF_ID
+	SUBMODULE pipeline_reg_IDEX
+		INSTANCE pipeline_stage_ID_EX
+	SUBMODULE pipeline_reg_EXMEM
+		INSTANCE pipeline_stage_EX_MEM

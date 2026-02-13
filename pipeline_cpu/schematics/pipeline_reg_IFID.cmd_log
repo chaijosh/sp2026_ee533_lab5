@@ -1,0 +1,2 @@
+sch2verilog -intstyle ise -family virtex2p   -w "Z:/EE533/lab5_sp26/pipeline_cpu/schematics/pipeline_reg_IFID.sch" pipeline_reg_IFID.vf
+sch2verilog -intstyle ise -family virtex2p   -w "Z:/EE533/lab5_sp26/pipeline_cpu/schematics/pipeline_reg_IFID.sch" pipeline_reg_IFID.vf

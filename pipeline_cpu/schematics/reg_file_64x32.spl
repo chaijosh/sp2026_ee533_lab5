@@ -1,0 +1,14 @@
+[Inputs]
+clk
+wena
+=r0addr[4:0]=
+=r1addr[4:0]=
+=waddr[4:0]=
+=wdata[63:0]=
+[Outputs]
+=r0data[63:0]=
+=r1data[63:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel reg_file_64x32
+

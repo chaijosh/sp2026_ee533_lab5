@@ -1,0 +1,169 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 10.1
+//  \   \         Application : ISE
+//  /   /         Filename : cpu_tb2.ant
+// /___/   /\     Timestamp : Fri Feb 13 09:37:50 2026
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: cpu_tb2
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module cpu_tb2;
+    reg clk = 1'b0;
+    reg rst = 1'b0;
+    wire [63:0] EX_r0data;
+    wire [63:0] EX_r1data;
+    wire [31:0] ID_instruction;
+    wire [31:0] IF_instruction;
+    wire [63:0] MEM_r0data;
+    wire [63:0] MEM_r1data;
+    wire [4:0] WB_waddr;
+    wire [63:0] WB_wdata;
+
+    parameter PERIOD = 200;
+    parameter real DUTY_CYCLE = 0.5;
+    parameter OFFSET = 100;
+
+    initial    // Clock process for clk
+    begin
+        #OFFSET;
+        forever
+        begin
+            clk = 1'b0;
+            #(PERIOD-(PERIOD*DUTY_CYCLE)) clk = 1'b1;
+            #(PERIOD*DUTY_CYCLE);
+        end
+    end
+
+    cpu_pipeline_schematic UUT (
+        .clk(clk),
+        .rst(rst),
+        .EX_r0data(EX_r0data),
+        .EX_r1data(EX_r1data),
+        .ID_instruction(ID_instruction),
+        .IF_instruction(IF_instruction),
+        .MEM_r0data(MEM_r0data),
+        .MEM_r1data(MEM_r1data),
+        .WB_waddr(WB_waddr),
+        .WB_wdata(WB_wdata));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process for clock clk
+        #0;
+        ANNOTATE_EX_r0data;
+        ANNOTATE_EX_r1data;
+        ANNOTATE_ID_instruction;
+        ANNOTATE_IF_instruction;
+        ANNOTATE_MEM_r0data;
+        ANNOTATE_MEM_r1data;
+        ANNOTATE_WB_waddr;
+        ANNOTATE_WB_wdata;
+        #OFFSET;
+        forever begin
+            #115;
+            ANNOTATE_EX_r0data;
+            ANNOTATE_EX_r1data;
+            ANNOTATE_ID_instruction;
+            ANNOTATE_IF_instruction;
+            ANNOTATE_MEM_r0data;
+            ANNOTATE_MEM_r1data;
+            ANNOTATE_WB_waddr;
+            ANNOTATE_WB_wdata;
+            #85;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("\\\\vmware-host\\shared folders\\EE533\\lab5_sp26\\pipeline_cpu\\schematics\\cpu_tb2.ano");
+        #5200 // Final time:  5200 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+        // -------------  Current Time:  585ns
+        #585;
+        rst = 1'b1;
+        // -------------------------------------
+    end
+
+    task ANNOTATE_EX_r0data;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,EX_r0data,%b]", $time, EX_r0data);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_EX_r1data;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,EX_r1data,%b]", $time, EX_r1data);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_ID_instruction;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,ID_instruction,%b]", $time, ID_instruction);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_IF_instruction;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,IF_instruction,%b]", $time, IF_instruction);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_MEM_r0data;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,MEM_r0data,%b]", $time, MEM_r0data);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_MEM_r1data;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,MEM_r1data,%b]", $time, MEM_r1data);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_WB_waddr;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,WB_waddr,%b]", $time, WB_waddr);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_WB_wdata;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,WB_wdata,%b]", $time, WB_wdata);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+endmodule
+

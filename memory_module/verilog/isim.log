@@ -1,0 +1,43 @@
+Command line:
+   ./reg_file_tb_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  1141
+
+Thu Feb 12 23:13:40 2026
+
+Total Line Count : 45
+
+ Elaboration Time: 0.015625 sec
+
+ Current Memory Usage: 141.418 Meg
+
+ Total Signals          : 18
+ Total Nets             : 217
+ Total Signal Drivers   : 11
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 16
+ Total Traceable Variables  : 24
+ Total Scalar Nets and Variables : 2425
+ntrace select -o on -n /reg_file_tb/clk 
+ntrace select -o on -n /reg_file_tb/r0addr 
+ntrace select -o on -n /reg_file_tb/r1addr 
+ntrace select -o on -n /reg_file_tb/wena 
+ntrace select -o on -n /reg_file_tb/waddr 
+ntrace select -o on -n /reg_file_tb/wdata 
+ntrace select -o on -n /reg_file_tb/r0data 
+ntrace select -o on -n /reg_file_tb/r1data 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+isimrun 1000 ns 
+isimrun 1000 ns 
+
+ Total Simulation Time: 0.203125 sec
+
+ Current Memory Usage: 151.917 Meg
+
+Thu Feb 12 23:15:31 2026
+

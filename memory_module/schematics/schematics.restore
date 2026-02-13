@@ -839,9 +839,15 @@ proc restore { { project_dir "" } } {
       "data_mem_64_256.xco" 
       "dcache_test.sch" 
       "dchche_tb.tbw" 
+      "dff_32b.sch" 
+      "dff_5b.sch" 
+      "dff_64b.sch" 
+      "dff_64b.v" 
+      "dff_8b.sch" 
       "imem_tb.tbw" 
       "imem_test.sch" 
-      "instr_mem_32x512.xco"}
+      "instr_mem_32x512.xco" 
+      "reg_file_64x32.v"}
 
   HandleException {
     AddUserFiles $iProjHelper $user_files
@@ -856,14 +862,20 @@ proc restore { { project_dir "" } } {
       "data_mem_64_256.vhd" 
       "data_mem_64_256.vho" 
       "dchche_tb.xwv" 
+      "dff_32b.sym" 
+      "dff_5b.sym" 
+      "dff_64b.sym" 
+      "dff_8b.sym" 
       "imem_tb.xwv" 
+      "imem_test.sym" 
       "instr_mem_32x512.asy" 
       "instr_mem_32x512.ngc" 
       "instr_mem_32x512.sym" 
       "instr_mem_32x512.v" 
       "instr_mem_32x512.veo" 
       "instr_mem_32x512.vhd" 
-      "instr_mem_32x512.vho"}
+      "instr_mem_32x512.vho" 
+      "reg_file_64x32.sym"}
 
   set origination 2
 
@@ -880,7 +892,7 @@ proc restore { { project_dir "" } } {
       "A" "" "" "" "PROPEXT_xilxSynthAddBufg_virtex2" "16" 
       "A" "" "" "" "PROPEXT_xilxSynthMaxFanout_virtex2" "500" 
       "A" "" "" "" "PROP_AutoGenFile" "false" 
-      "A" "" "" "" "PROP_BehavioralSimTop" "Module|dchche_tb" 
+      "A" "" "" "" "PROP_BehavioralSimTop" "Module|imem_tb" 
       "A" "" "" "" "PROP_CompxlibOtherCompxlibOpts" "" 
       "A" "" "" "" "PROP_CompxlibOutputDir" "$XILINX/<language>/<simulator>" 
       "A" "" "" "" "PROP_CompxlibOverwriteLib" "Overwrite" 
@@ -906,6 +918,10 @@ proc restore { { project_dir "" } } {
       "A" "" "" "" "PROP_ISimUseCustomSimCmdFile_par_tbw" "false" 
       "A" "" "" "" "PROP_ISimUutInstName" "UUT" 
       "A" "" "" "" "PROP_ImpactProjectFile" "Default" 
+      "A" "" "" "" "PROP_LastAppliedGoal" "Balanced" 
+      "A" "" "" "" "PROP_LastAppliedStrategy" "Xilinx Default (unlocked)" 
+      "A" "" "" "" "PROP_LastUnlockStatus" "false" 
+      "A" "" "" "" "PROP_OverwriteSym" "false" 
       "A" "" "" "" "PROP_Parse_Target" "synthesis" 
       "A" "" "" "" "PROP_PartitionCreateDelete" "" 
       "A" "" "" "" "PROP_PartitionForcePlacement" "" 
@@ -943,6 +959,7 @@ proc restore { { project_dir "" } } {
       "A" "" "" "" "PROP_SynthXORCollapse" "true" 
       "A" "" "" "" "PROP_Top_Level_Module_Type" "HDL" 
       "A" "" "" "" "PROP_UseSmartGuide" "false" 
+      "A" "" "" "" "PROP_UserBrowsedStrategyFiles" "" 
       "A" "" "" "" "PROP_UserConstraintEditorPreference" "Constraints Editor" 
       "A" "" "" "" "PROP_UserEditorCustomSetting" "" 
       "A" "" "" "" "PROP_UserEditorPreference" "ISE Text Editor" 

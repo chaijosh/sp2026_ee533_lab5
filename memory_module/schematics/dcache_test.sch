@@ -6,21 +6,14 @@ BEGIN SCHEMATIC
         EDITTRAIT all:0
     END ATTR
     BEGIN NETLIST
-        SIGNAL XLXN_1
         SIGNAL addr(7:0)
         SIGNAL write_data(63:0)
         SIGNAL MemWrite
         SIGNAL clk
         SIGNAL read_data(63:0)
-        SIGNAL XLXN_14
-        SIGNAL XLXN_15
-        SIGNAL XLXN_16
-        SIGNAL XLXN_17
         SIGNAL XLXN_18
-        SIGNAL XLXN_19
         SIGNAL MemRead
         SIGNAL XLXN_21
-        SIGNAL XLXN_22
         PORT Input addr(7:0)
         PORT Input write_data(63:0)
         PORT Input MemWrite
