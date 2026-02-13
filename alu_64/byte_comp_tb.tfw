@@ -1,0 +1,58 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 10.1
+//  \   \         Application : ISE
+//  /   /         Filename : byte_comp_tb.tfw
+// /___/   /\     Timestamp : Fri Feb 13 10:32:59 2026
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: byte_comp_tb
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module byte_comp_tb;
+    reg [7:0] A = 8'b00000000;
+    reg mask = 1'b0;
+    reg reg_comp = 1'b0;
+    wire O;
+
+
+    byte_comp_mask UUT (
+        .A(A),
+        .mask(mask),
+        .reg_comp(reg_comp),
+        .O(O));
+
+    initial begin
+        // -------------  Current Time:  100ns
+        #100;
+        mask = 1'b1;
+        A = 8'b00000001;
+        // -------------------------------------
+        // -------------  Current Time:  300ns
+        #200;
+        reg_comp = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  500ns
+        #200;
+        mask = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  700ns
+        #200;
+        reg_comp = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  900ns
+        #200;
+        A = 8'b11111111;
+    end
+
+endmodule
+

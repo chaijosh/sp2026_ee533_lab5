@@ -1,0 +1,3 @@
+verilog work "byte_comp_mask.vf"
+verilog work "byte_comp_tb.tfw"
+verilog work "C:/Xilinx/10.1/ISE/verilog/src/glbl.v"

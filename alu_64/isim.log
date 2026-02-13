@@ -1,0 +1,30 @@
+Command line:
+   ./byte_comp_tb_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  1053
+
+Fri Feb 13 10:33:14 2026
+
+Total Line Count : 26
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 141.418 Meg
+
+ Total Signals          : 63
+ Total Nets             : 26
+ Total Signal Drivers   : 13
+ Total Blocks           : 12
+ Total Primitive Blocks : 9
+ Total Processes        : 16
+ Total Traceable Variables  : 20
+ Total Scalar Nets and Variables : 115
+ntrace select -o on -n /byte_comp_tb/O 
+ntrace select -o on -n /byte_comp_tb/A 
+ntrace select -o on -n /byte_comp_tb/mask 
+ntrace select -o on -n /byte_comp_tb/reg_comp 
+ntrace start 
+isimrun 4000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

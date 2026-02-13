@@ -1,0 +1,1278 @@
+VERSION 6
+BEGIN SCHEMATIC
+    BEGIN ATTR DeviceFamilyName "virtex2p"
+        DELETE all:0
+        EDITNAME all:0
+        EDITTRAIT all:0
+    END ATTR
+    BEGIN NETLIST
+        SIGNAL XLXN_7(63:0)
+        SIGNAL XLXN_8(63:0)
+        SIGNAL A(63:0)
+        SIGNAL ShiftA(5:0)
+        SIGNAL A_s(63:0)
+        SIGNAL XLXN_49
+        SIGNAL XLXN_51
+        SIGNAL XLXN_53
+        SIGNAL XLXN_55
+        SIGNAL XLXN_57
+        SIGNAL XLXN_59
+        SIGNAL XLXN_61
+        SIGNAL XLXN_79
+        SIGNAL XLXN_81
+        SIGNAL XLXN_83
+        SIGNAL XLXN_85
+        SIGNAL XLXN_87
+        SIGNAL XLXN_89
+        SIGNAL XLXN_91
+        SIGNAL XLXN_109
+        SIGNAL XLXN_17
+        SIGNAL XLXN_111
+        SIGNAL XLXN_18
+        SIGNAL XLXN_113
+        SIGNAL XLXN_115
+        SIGNAL XLXN_21
+        SIGNAL XLXN_117
+        SIGNAL XLXN_22
+        SIGNAL XLXN_119
+        SIGNAL XLXN_23
+        SIGNAL XLXN_121
+        SIGNAL XLXN_24
+        SIGNAL A(7:0)
+        SIGNAL B_actual(7:0)
+        SIGNAL A(15:8)
+        SIGNAL B_actual(15:8)
+        SIGNAL A(23:16)
+        SIGNAL B_actual(23:16)
+        SIGNAL A(31:24)
+        SIGNAL B_actual(31:24)
+        SIGNAL A(39:32)
+        SIGNAL B_actual(39:32)
+        SIGNAL B_actual(63:56)
+        SIGNAL A(63:56)
+        SIGNAL A(55:48)
+        SIGNAL B_actual(55:48)
+        SIGNAL B_actual(47:40)
+        SIGNAL A(47:40)
+        SIGNAL XLXN_139(63:0)
+        SIGNAL XLXN_140(63:0)
+        SIGNAL XLXN_139(63:56)
+        SIGNAL XLXN_139(55:48)
+        SIGNAL XLXN_139(47:40)
+        SIGNAL XLXN_139(39:32)
+        SIGNAL XLXN_139(31:24)
+        SIGNAL XLXN_139(23:16)
+        SIGNAL XLXN_139(15:8)
+        SIGNAL XLXN_139(7:0)
+        SIGNAL XLXN_140(63:56)
+        SIGNAL XLXN_140(55:48)
+        SIGNAL XLXN_140(47:40)
+        SIGNAL XLXN_140(39:32)
+        SIGNAL XLXN_140(23:16)
+        SIGNAL XLXN_140(15:8)
+        SIGNAL XLXN_140(7:0)
+        SIGNAL XLXN_160(63:0)
+        SIGNAL XLXN_161(63:0)
+        SIGNAL XLXN_162(63:0)
+        SIGNAL ShiftA(6:0)
+        SIGNAL ShiftB(6:0)
+        SIGNAL XLXN_166(63:0)
+        SIGNAL XLXN_166(63:56)
+        SIGNAL XLXN_166(55:48)
+        SIGNAL XLXN_166(47:40)
+        SIGNAL XLXN_166(39:32)
+        SIGNAL XLXN_166(31:24)
+        SIGNAL XLXN_166(23:16)
+        SIGNAL XLXN_166(15:8)
+        SIGNAL XLXN_166(7:0)
+        SIGNAL XLXN_177
+        SIGNAL XLXN_178
+        SIGNAL XLXN_140(31:24)
+        SIGNAL XLXN_180(63:0)
+        SIGNAL XLXN_180(63:56)
+        SIGNAL XLXN_180(55:48)
+        SIGNAL XLXN_180(47:40)
+        SIGNAL XLXN_180(39:32)
+        SIGNAL XLXN_180(31:24)
+        SIGNAL XLXN_180(23:16)
+        SIGNAL XLXN_180(15:8)
+        SIGNAL XLXN_180(7:0)
+        SIGNAL XLXN_190
+        SIGNAL ShiftA(6)
+        SIGNAL XLXN_192
+        SIGNAL ALUOp(3:0)
+        SIGNAL XLXN_194
+        SIGNAL XLXN_195
+        SIGNAL XLXN_196
+        SIGNAL XLXN_197
+        SIGNAL B_actual(63:0)
+        SIGNAL XLXN_199
+        SIGNAL XLXN_201
+        SIGNAL B(63:0)
+        SIGNAL ShiftB(5:0)
+        SIGNAL XLXN_204
+        SIGNAL ShiftB(6)
+        SIGNAL XLXN_206(63:0)
+        SIGNAL XLXN_207(63:0)
+        SIGNAL XLXN_208
+        SIGNAL byte_select(7:0)
+        SIGNAL XLXN_216(7:0)
+        SIGNAL XLXN_217(7:0)
+        SIGNAL XLXN_218(7:0)
+        SIGNAL XLXN_219(7:0)
+        SIGNAL XLXN_220(7:0)
+        SIGNAL XLXN_221(7:0)
+        SIGNAL XLXN_222(7:0)
+        SIGNAL XLXN_223(7:0)
+        SIGNAL byte_select(0)
+        SIGNAL byte_select(1)
+        SIGNAL byte_select(2)
+        SIGNAL byte_select(3)
+        SIGNAL byte_select(7)
+        SIGNAL byte_select(6)
+        SIGNAL byte_select(5)
+        SIGNAL byte_select(4)
+        SIGNAL XLXN_232
+        SIGNAL XLXN_233
+        SIGNAL XLXN_234
+        SIGNAL XLXN_235
+        SIGNAL XLXN_236
+        SIGNAL XLXN_237
+        SIGNAL O(63:0)
+        SIGNAL Overflow
+        SIGNAL XLXN_240
+        SIGNAL XLXN_241
+        SIGNAL XLXN_242
+        SIGNAL XLXN_243
+        SIGNAL XLXN_244
+        SIGNAL XLXN_245
+        SIGNAL XLXN_246
+        SIGNAL XLXN_247
+        SIGNAL XLXN_248(31:0)
+        SIGNAL XLXN_251(31:0)
+        SIGNAL XLXN_252
+        SIGNAL EQ
+        PORT Input A(63:0)
+        PORT Input ShiftA(6:0)
+        PORT Input ShiftB(6:0)
+        PORT Input ALUOp(3:0)
+        PORT Input B(63:0)
+        PORT Input byte_select(7:0)
+        PORT Output O(63:0)
+        PORT Output Overflow
+        PORT Output EQ
+        BEGIN BLOCKDEF alu_8
+            TIMESTAMP 2026 2 12 3 7 12
+            RECTANGLE N 320 84 384 108 
+            LINE N 320 96 384 96 
+            RECTANGLE N 320 20 384 44 
+            LINE N 320 32 384 32 
+            RECTANGLE N 0 -236 64 -212 
+            LINE N 64 -224 0 -224 
+            RECTANGLE N 0 -140 64 -116 
+            LINE N 64 -128 0 -128 
+            LINE N 64 -32 0 -32 
+            RECTANGLE N 320 -236 384 -212 
+            LINE N 320 -224 384 -224 
+            RECTANGLE N 320 -172 384 -148 
+            LINE N 320 -160 384 -160 
+            LINE N 320 -32 384 -32 
+            RECTANGLE N 64 -256 320 128 
+        END BLOCKDEF
+        BEGIN BLOCKDEF mux64b
+            TIMESTAMP 2026 2 13 12 21 52
+            RECTANGLE N 64 -192 320 0 
+            RECTANGLE N 0 -172 64 -148 
+            LINE N 64 -160 0 -160 
+            RECTANGLE N 0 -108 64 -84 
+            LINE N 64 -96 0 -96 
+            LINE N 64 -32 0 -32 
+            RECTANGLE N 320 -172 384 -148 
+            LINE N 320 -160 384 -160 
+        END BLOCKDEF
+        BEGIN BLOCKDEF xor_64_1
+            TIMESTAMP 2026 2 13 12 22 6
+            RECTANGLE N 64 -128 320 0 
+            RECTANGLE N 0 -108 64 -84 
+            LINE N 64 -96 0 -96 
+            LINE N 64 -32 0 -32 
+            RECTANGLE N 320 -108 384 -84 
+            LINE N 320 -96 384 -96 
+        END BLOCKDEF
+        BEGIN BLOCKDEF shifter
+            TIMESTAMP 2026 2 13 15 3 14
+            LINE N 64 32 0 32 
+            RECTANGLE N 0 -172 64 -148 
+            LINE N 64 -160 0 -160 
+            RECTANGLE N 0 -108 64 -84 
+            LINE N 64 -96 0 -96 
+            RECTANGLE N 320 -172 384 -148 
+            LINE N 320 -160 384 -160 
+            RECTANGLE N 64 -192 320 64 
+        END BLOCKDEF
+        BEGIN BLOCKDEF alu_op
+            TIMESTAMP 2026 2 13 16 8 39
+            RECTANGLE N 0 20 64 44 
+            LINE N 64 32 0 32 
+            LINE N 320 32 384 32 
+            LINE N 320 96 384 96 
+            LINE N 320 160 384 160 
+            LINE N 320 224 384 224 
+            LINE N 320 288 384 288 
+            LINE N 320 352 384 352 
+            LINE N 320 416 384 416 
+            LINE N 320 480 384 480 
+            LINE N 320 -224 384 -224 
+            RECTANGLE N 64 -256 320 512 
+        END BLOCKDEF
+        BEGIN BLOCKDEF byte_comp_mask
+            TIMESTAMP 2026 2 13 17 0 10
+            LINE N 64 32 0 32 
+            RECTANGLE N 0 -108 64 -84 
+            LINE N 64 -96 0 -96 
+            LINE N 64 -32 0 -32 
+            LINE N 320 -96 384 -96 
+            RECTANGLE N 64 -128 320 64 
+        END BLOCKDEF
+        BEGIN BLOCKDEF and8
+            TIMESTAMP 2000 1 1 10 10 10
+            LINE N 64 -64 64 -512 
+            LINE N 0 -64 64 -64 
+            LINE N 0 -128 64 -128 
+            LINE N 0 -192 64 -192 
+            LINE N 0 -256 64 -256 
+            LINE N 0 -320 64 -320 
+            LINE N 0 -384 64 -384 
+            LINE N 0 -448 64 -448 
+            LINE N 0 -512 64 -512 
+            LINE N 64 -336 144 -336 
+            LINE N 144 -240 64 -240 
+            ARC N 96 -336 192 -240 144 -240 144 -336 
+            LINE N 256 -288 192 -288 
+        END BLOCKDEF
+        BEGIN BLOCK XLXI_10 mux64b
+            PIN A(63:0) XLXN_139(63:0)
+            PIN B(63:0) XLXN_140(63:0)
+            PIN S XLXN_195
+            PIN O(63:0) XLXN_160(63:0)
+        END BLOCK
+        BEGIN BLOCK XLXI_11 mux64b
+            PIN A(63:0) XLXN_160(63:0)
+            PIN B(63:0) XLXN_166(63:0)
+            PIN S XLXN_197
+            PIN O(63:0) XLXN_161(63:0)
+        END BLOCK
+        BEGIN BLOCK XLXI_12 mux64b
+            PIN A(63:0) XLXN_161(63:0)
+            PIN B(63:0) XLXN_180(63:0)
+            PIN S XLXN_196
+            PIN O(63:0) XLXN_162(63:0)
+        END BLOCK
+        BEGIN BLOCK XLXI_13 mux64b
+            PIN A(63:0) XLXN_162(63:0)
+            PIN B(63:0) A_s(63:0)
+            PIN S XLXN_194
+            PIN O(63:0) O(63:0)
+        END BLOCK
+        BEGIN BLOCK XLXI_15 xor_64_1
+            PIN A(63:0) XLXN_207(63:0)
+            PIN B XLXN_201
+            PIN O(63:0) B_actual(63:0)
+        END BLOCK
+        BEGIN BLOCK XLXI_16 shifter
+            PIN shamt(5:0) ShiftA(5:0)
+            PIN A(63:0) A(63:0)
+            PIN O(63:0) A_s(63:0)
+            PIN shcode ShiftA(6)
+        END BLOCK
+        BEGIN BLOCK XLXI_1 alu_8
+            PIN A(7:0) A(7:0)
+            PIN B(7:0) B_actual(7:0)
+            PIN CI XLXN_201
+            PIN alu_and(7:0) XLXN_140(7:0)
+            PIN S(7:0) XLXN_139(7:0)
+            PIN alu_or(7:0) XLXN_166(7:0)
+            PIN CO XLXN_17
+            PIN alu_xnor(7:0) XLXN_180(7:0)
+        END BLOCK
+        BEGIN BLOCK XLXI_3 alu_8
+            PIN A(7:0) A(23:16)
+            PIN B(7:0) B_actual(23:16)
+            PIN CI XLXN_18
+            PIN alu_and(7:0) XLXN_140(23:16)
+            PIN S(7:0) XLXN_139(23:16)
+            PIN alu_or(7:0) XLXN_166(23:16)
+            PIN CO XLXN_178
+            PIN alu_xnor(7:0) XLXN_180(23:16)
+        END BLOCK
+        BEGIN BLOCK XLXI_4 alu_8
+            PIN A(7:0) A(31:24)
+            PIN B(7:0) B_actual(31:24)
+            PIN CI XLXN_178
+            PIN alu_and(7:0) XLXN_140(31:24)
+            PIN S(7:0) XLXN_139(31:24)
+            PIN alu_or(7:0) XLXN_166(31:24)
+            PIN CO XLXN_23
+            PIN alu_xnor(7:0) XLXN_180(31:24)
+        END BLOCK
+        BEGIN BLOCK XLXI_5 alu_8
+            PIN A(7:0) A(39:32)
+            PIN B(7:0) B_actual(39:32)
+            PIN CI XLXN_23
+            PIN alu_and(7:0) XLXN_140(39:32)
+            PIN S(7:0) XLXN_139(39:32)
+            PIN alu_or(7:0) XLXN_166(39:32)
+            PIN CO XLXN_21
+            PIN alu_xnor(7:0) XLXN_180(39:32)
+        END BLOCK
+        BEGIN BLOCK XLXI_6 alu_8
+            PIN A(7:0) A(47:40)
+            PIN B(7:0) B_actual(47:40)
+            PIN CI XLXN_21
+            PIN alu_and(7:0) XLXN_140(47:40)
+            PIN S(7:0) XLXN_139(47:40)
+            PIN alu_or(7:0) XLXN_166(47:40)
+            PIN CO XLXN_22
+            PIN alu_xnor(7:0) XLXN_180(47:40)
+        END BLOCK
+        BEGIN BLOCK XLXI_7 alu_8
+            PIN A(7:0) A(55:48)
+            PIN B(7:0) B_actual(55:48)
+            PIN CI XLXN_22
+            PIN alu_and(7:0) XLXN_140(55:48)
+            PIN S(7:0) XLXN_139(55:48)
+            PIN alu_or(7:0) XLXN_166(55:48)
+            PIN CO XLXN_24
+            PIN alu_xnor(7:0) XLXN_180(55:48)
+        END BLOCK
+        BEGIN BLOCK XLXI_8 alu_8
+            PIN A(7:0) A(63:56)
+            PIN B(7:0) B_actual(63:56)
+            PIN CI XLXN_24
+            PIN alu_and(7:0) XLXN_140(63:56)
+            PIN S(7:0) XLXN_139(63:56)
+            PIN alu_or(7:0) XLXN_166(63:56)
+            PIN CO Overflow
+            PIN alu_xnor(7:0) XLXN_180(63:56)
+        END BLOCK
+        BEGIN BLOCK XLXI_2 alu_8
+            PIN A(7:0) A(15:8)
+            PIN B(7:0) B_actual(15:8)
+            PIN CI XLXN_17
+            PIN alu_and(7:0) XLXN_140(15:8)
+            PIN S(7:0) XLXN_139(15:8)
+            PIN alu_or(7:0) XLXN_166(15:8)
+            PIN CO XLXN_18
+            PIN alu_xnor(7:0) XLXN_180(15:8)
+        END BLOCK
+        BEGIN BLOCK XLXI_52 alu_op
+            PIN sub XLXN_201
+            PIN ALUOp(3:0) ALUOp(3:0)
+            PIN alu_shift_out XLXN_194
+            PIN alu_and XLXN_195
+            PIN alu_xnor XLXN_196
+            PIN alu_or XLXN_197
+            PIN alu_comp XLXN_237
+            PIN alu_shiftA
+            PIN alu_shiftB XLXN_208
+            PIN substr_comp
+        END BLOCK
+        BEGIN BLOCK XLXI_17 shifter
+            PIN shamt(5:0) ShiftB(5:0)
+            PIN A(63:0) B(63:0)
+            PIN O(63:0) XLXN_206(63:0)
+            PIN shcode ShiftB(6)
+        END BLOCK
+        BEGIN BLOCK XLXI_54 mux64b
+            PIN A(63:0) B(63:0)
+            PIN B(63:0) XLXN_206(63:0)
+            PIN S XLXN_208
+            PIN O(63:0) XLXN_207(63:0)
+        END BLOCK
+        BEGIN BLOCK XLXI_64 byte_comp_mask
+            PIN A(7:0) XLXN_180(7:0)
+            PIN mask byte_select(0)
+            PIN O XLXN_240
+            PIN reg_comp XLXN_237
+        END BLOCK
+        BEGIN BLOCK XLXI_65 byte_comp_mask
+            PIN A(7:0) XLXN_180(15:8)
+            PIN mask byte_select(1)
+            PIN O XLXN_241
+            PIN reg_comp XLXN_237
+        END BLOCK
+        BEGIN BLOCK XLXI_66 byte_comp_mask
+            PIN A(7:0) XLXN_180(23:16)
+            PIN mask byte_select(2)
+            PIN O XLXN_242
+            PIN reg_comp XLXN_237
+        END BLOCK
+        BEGIN BLOCK XLXI_67 byte_comp_mask
+            PIN A(7:0) XLXN_180(31:24)
+            PIN mask byte_select(3)
+            PIN O XLXN_243
+            PIN reg_comp XLXN_237
+        END BLOCK
+        BEGIN BLOCK XLXI_68 byte_comp_mask
+            PIN A(7:0) XLXN_180(39:32)
+            PIN mask byte_select(4)
+            PIN O XLXN_244
+            PIN reg_comp XLXN_237
+        END BLOCK
+        BEGIN BLOCK XLXI_69 byte_comp_mask
+            PIN A(7:0) XLXN_180(47:40)
+            PIN mask byte_select(5)
+            PIN O XLXN_245
+            PIN reg_comp XLXN_237
+        END BLOCK
+        BEGIN BLOCK XLXI_70 byte_comp_mask
+            PIN A(7:0) XLXN_180(55:48)
+            PIN mask byte_select(6)
+            PIN O XLXN_246
+            PIN reg_comp XLXN_237
+        END BLOCK
+        BEGIN BLOCK XLXI_71 byte_comp_mask
+            PIN A(7:0) XLXN_180(63:56)
+            PIN mask byte_select(7)
+            PIN O XLXN_247
+            PIN reg_comp XLXN_237
+        END BLOCK
+        BEGIN BLOCK XLXI_72 and8
+            PIN I0 XLXN_247
+            PIN I1 XLXN_246
+            PIN I2 XLXN_245
+            PIN I3 XLXN_244
+            PIN I4 XLXN_243
+            PIN I5 XLXN_242
+            PIN I6 XLXN_241
+            PIN I7 XLXN_240
+            PIN O EQ
+        END BLOCK
+    END NETLIST
+    BEGIN SHEET 1 7040 5440
+        BEGIN BRANCH A(63:0)
+            WIRE 608 640 768 640
+            WIRE 768 640 768 704
+            WIRE 768 704 880 704
+        END BRANCH
+        BEGIN INSTANCE XLXI_16 880 800 R0
+        END INSTANCE
+        BEGIN BRANCH ShiftA(5:0)
+            WIRE 800 640 832 640
+            WIRE 832 640 880 640
+            BEGIN DISPLAY 832 640 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH A_s(63:0)
+            WIRE 1264 640 1328 640
+            WIRE 1328 640 1376 640
+            WIRE 1376 32 1376 640
+            WIRE 1376 32 5264 32
+            WIRE 5264 32 5360 32
+            WIRE 5360 32 5360 4400
+            WIRE 5360 4400 5456 4400
+        END BRANCH
+        IOMARKER 608 640 A(63:0) R180 28
+        BEGIN INSTANCE XLXI_10 3888 4496 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_1 3200 416 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_3 3184 1392 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_4 3184 1856 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_5 3184 2368 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_6 3184 2880 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_7 3184 3360 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_8 3184 3856 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_2 3200 896 R0
+        END INSTANCE
+        BEGIN BRANCH XLXN_17
+            WIRE 3136 864 3200 864
+            WIRE 3136 864 3136 1088
+            WIRE 3136 1088 3664 1088
+            WIRE 3584 384 3664 384
+            WIRE 3664 384 3664 1088
+        END BRANCH
+        BEGIN BRANCH XLXN_18
+            WIRE 3120 1360 3184 1360
+            WIRE 3120 1360 3120 1584
+            WIRE 3120 1584 3648 1584
+            WIRE 3584 864 3648 864
+            WIRE 3648 864 3648 1584
+        END BRANCH
+        BEGIN BRANCH XLXN_21
+            WIRE 3104 2560 3104 2848
+            WIRE 3104 2848 3184 2848
+            WIRE 3104 2560 3648 2560
+            WIRE 3568 2336 3648 2336
+            WIRE 3648 2336 3648 2560
+        END BRANCH
+        BEGIN BRANCH XLXN_22
+            WIRE 3104 3040 3104 3328
+            WIRE 3104 3328 3184 3328
+            WIRE 3104 3040 3648 3040
+            WIRE 3568 2848 3648 2848
+            WIRE 3648 2848 3648 3040
+        END BRANCH
+        BEGIN BRANCH XLXN_23
+            WIRE 3120 2064 3120 2336
+            WIRE 3120 2336 3184 2336
+            WIRE 3120 2064 3616 2064
+            WIRE 3568 1824 3616 1824
+            WIRE 3616 1824 3616 2064
+        END BRANCH
+        BEGIN BRANCH XLXN_24
+            WIRE 3120 3824 3184 3824
+            WIRE 3120 3824 3120 4064
+            WIRE 3120 4064 3648 4064
+            WIRE 3568 3328 3648 3328
+            WIRE 3648 3328 3648 4064
+        END BRANCH
+        BEGIN BRANCH A(7:0)
+            WIRE 3008 192 3072 192
+            WIRE 3072 192 3200 192
+            BEGIN DISPLAY 3072 192 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH B_actual(7:0)
+            WIRE 3024 288 3136 288
+            WIRE 3136 288 3200 288
+            BEGIN DISPLAY 3136 288 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH A(15:8)
+            WIRE 3056 672 3104 672
+            WIRE 3104 672 3200 672
+            BEGIN DISPLAY 3104 672 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH B_actual(15:8)
+            WIRE 3008 768 3072 768
+            WIRE 3072 768 3200 768
+            BEGIN DISPLAY 3072 768 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH A(23:16)
+            WIRE 2944 1168 3024 1168
+            WIRE 3024 1168 3184 1168
+            BEGIN DISPLAY 3024 1168 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH B_actual(23:16)
+            WIRE 2992 1264 3024 1264
+            WIRE 3024 1264 3184 1264
+            BEGIN DISPLAY 3024 1264 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH A(31:24)
+            WIRE 2976 1632 3040 1632
+            WIRE 3040 1632 3184 1632
+            BEGIN DISPLAY 3040 1632 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH B_actual(31:24)
+            WIRE 2928 1728 3008 1728
+            WIRE 3008 1728 3184 1728
+            BEGIN DISPLAY 3008 1728 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH A(39:32)
+            WIRE 2928 2144 3024 2144
+            WIRE 3024 2144 3184 2144
+            BEGIN DISPLAY 3024 2144 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH B_actual(39:32)
+            WIRE 2944 2240 3024 2240
+            WIRE 3024 2240 3184 2240
+            BEGIN DISPLAY 3024 2240 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH B_actual(63:56)
+            WIRE 2992 3728 3056 3728
+            WIRE 3056 3728 3184 3728
+            BEGIN DISPLAY 3056 3728 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH A(63:56)
+            WIRE 2976 3632 3056 3632
+            WIRE 3056 3632 3184 3632
+            BEGIN DISPLAY 3056 3632 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH A(55:48)
+            WIRE 2960 3120 2960 3136
+            WIRE 2960 3136 3024 3136
+            WIRE 3024 3136 3184 3136
+            BEGIN DISPLAY 3024 3136 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH B_actual(55:48)
+            WIRE 3008 3232 3040 3232
+            WIRE 3040 3232 3184 3232
+            BEGIN DISPLAY 3040 3232 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH B_actual(47:40)
+            WIRE 2944 2752 3072 2752
+            WIRE 3072 2752 3184 2752
+            BEGIN DISPLAY 3072 2752 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH A(47:40)
+            WIRE 2960 2656 3008 2656
+            WIRE 3008 2656 3184 2656
+            BEGIN DISPLAY 3008 2656 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH XLXN_139(63:0)
+            WIRE 3872 160 3888 160
+            WIRE 3872 160 3872 192
+            WIRE 3872 192 3872 672
+            WIRE 3872 672 3872 1168
+            WIRE 3872 1168 3872 1632
+            WIRE 3872 1632 3872 2144
+            WIRE 3872 2144 3872 2656
+            WIRE 3872 2656 3872 3136
+            WIRE 3872 3136 3872 3632
+            WIRE 3872 3632 3872 4336
+            WIRE 3872 4336 3888 4336
+        END BRANCH
+        BEGIN BRANCH XLXN_140(63:0)
+            WIRE 3792 192 3792 256
+            WIRE 3792 256 3792 736
+            WIRE 3792 736 3792 1232
+            WIRE 3792 1232 3792 1696
+            WIRE 3792 1696 3792 2208
+            WIRE 3792 2208 3792 2720
+            WIRE 3792 2720 3792 3200
+            WIRE 3792 3200 3792 3696
+            WIRE 3792 3696 3792 4400
+            WIRE 3792 4400 3888 4400
+        END BRANCH
+        BUSTAP 3872 3632 3776 3632
+        BEGIN BRANCH XLXN_139(63:56)
+            WIRE 3568 3632 3664 3632
+            WIRE 3664 3632 3776 3632
+            BEGIN DISPLAY 3672 3632 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 3872 3136 3776 3136
+        BEGIN BRANCH XLXN_139(55:48)
+            WIRE 3568 3136 3664 3136
+            WIRE 3664 3136 3776 3136
+            BEGIN DISPLAY 3672 3136 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 3872 2656 3776 2656
+        BEGIN BRANCH XLXN_139(47:40)
+            WIRE 3568 2656 3664 2656
+            WIRE 3664 2656 3776 2656
+            BEGIN DISPLAY 3672 2656 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 3872 2144 3776 2144
+        BEGIN BRANCH XLXN_139(39:32)
+            WIRE 3568 2144 3664 2144
+            WIRE 3664 2144 3776 2144
+            BEGIN DISPLAY 3672 2144 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 3872 1632 3776 1632
+        BEGIN BRANCH XLXN_139(31:24)
+            WIRE 3568 1632 3664 1632
+            WIRE 3664 1632 3776 1632
+            BEGIN DISPLAY 3672 1632 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 3872 1168 3776 1168
+        BEGIN BRANCH XLXN_139(23:16)
+            WIRE 3568 1168 3664 1168
+            WIRE 3664 1168 3776 1168
+            BEGIN DISPLAY 3672 1168 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 3872 672 3776 672
+        BEGIN BRANCH XLXN_139(15:8)
+            WIRE 3584 672 3680 672
+            WIRE 3680 672 3776 672
+            BEGIN DISPLAY 3680 672 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 3872 192 3776 192
+        BEGIN BRANCH XLXN_139(7:0)
+            WIRE 3584 192 3680 192
+            WIRE 3680 192 3776 192
+            BEGIN DISPLAY 3680 192 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 3792 3696 3696 3696
+        BEGIN BRANCH XLXN_140(63:56)
+            WIRE 3568 3696 3632 3696
+            WIRE 3632 3696 3696 3696
+            BEGIN DISPLAY 3632 3696 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 3792 3200 3696 3200
+        BEGIN BRANCH XLXN_140(55:48)
+            WIRE 3568 3200 3632 3200
+            WIRE 3632 3200 3696 3200
+            BEGIN DISPLAY 3632 3200 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 3792 2720 3696 2720
+        BEGIN BRANCH XLXN_140(47:40)
+            WIRE 3568 2720 3632 2720
+            WIRE 3632 2720 3696 2720
+            BEGIN DISPLAY 3632 2720 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 3792 2208 3696 2208
+        BEGIN BRANCH XLXN_140(39:32)
+            WIRE 3568 2208 3632 2208
+            WIRE 3632 2208 3696 2208
+            BEGIN DISPLAY 3632 2208 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 3792 1232 3696 1232
+        BEGIN BRANCH XLXN_140(23:16)
+            WIRE 3568 1232 3632 1232
+            WIRE 3632 1232 3696 1232
+            BEGIN DISPLAY 3632 1232 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 3792 736 3696 736
+        BEGIN BRANCH XLXN_140(15:8)
+            WIRE 3584 736 3632 736
+            WIRE 3632 736 3696 736
+            BEGIN DISPLAY 3640 736 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 3792 256 3696 256
+        BEGIN BRANCH XLXN_140(7:0)
+            WIRE 3584 256 3632 256
+            WIRE 3632 256 3696 256
+            BEGIN DISPLAY 3640 256 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN INSTANCE XLXI_11 4416 4496 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_12 4944 4496 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_13 5456 4496 R0
+        END INSTANCE
+        BEGIN BRANCH XLXN_160(63:0)
+            WIRE 4272 4336 4416 4336
+        END BRANCH
+        BEGIN BRANCH XLXN_161(63:0)
+            WIRE 4800 4336 4944 4336
+        END BRANCH
+        BEGIN BRANCH XLXN_162(63:0)
+            WIRE 5328 4336 5456 4336
+        END BRANCH
+        BEGIN BRANCH ShiftA(6:0)
+            WIRE 352 304 512 304
+        END BRANCH
+        BEGIN BRANCH ShiftB(6:0)
+            WIRE 352 448 528 448
+        END BRANCH
+        IOMARKER 352 304 ShiftA(6:0) R180 28
+        IOMARKER 352 448 ShiftB(6:0) R180 28
+        BEGIN INSTANCE XLXI_15 1664 1216 R0
+        END INSTANCE
+        BEGIN BRANCH XLXN_166(63:0)
+            WIRE 4256 144 4336 144
+            WIRE 4336 144 4336 448
+            WIRE 4336 448 4336 928
+            WIRE 4336 928 4336 1424
+            WIRE 4336 1424 4336 1888
+            WIRE 4336 1888 4336 2400
+            WIRE 4336 2400 4336 2912
+            WIRE 4336 2912 4336 3392
+            WIRE 4336 3392 4336 3888
+            WIRE 4336 3888 4336 4400
+            WIRE 4336 4400 4416 4400
+        END BRANCH
+        BUSTAP 4336 3888 4240 3888
+        BEGIN BRANCH XLXN_166(63:56)
+            WIRE 3568 3888 3904 3888
+            WIRE 3904 3888 4240 3888
+            BEGIN DISPLAY 3904 3888 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 4336 3392 4240 3392
+        BEGIN BRANCH XLXN_166(55:48)
+            WIRE 3568 3392 3904 3392
+            WIRE 3904 3392 4240 3392
+            BEGIN DISPLAY 3904 3392 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 4336 2912 4240 2912
+        BEGIN BRANCH XLXN_166(47:40)
+            WIRE 3568 2912 3904 2912
+            WIRE 3904 2912 4240 2912
+            BEGIN DISPLAY 3904 2912 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 4336 2400 4240 2400
+        BEGIN BRANCH XLXN_166(39:32)
+            WIRE 3568 2400 3904 2400
+            WIRE 3904 2400 4240 2400
+            BEGIN DISPLAY 3904 2400 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 4336 1888 4240 1888
+        BEGIN BRANCH XLXN_166(31:24)
+            WIRE 3568 1888 3904 1888
+            WIRE 3904 1888 4240 1888
+            BEGIN DISPLAY 3904 1888 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 4336 1424 4240 1424
+        BEGIN BRANCH XLXN_166(23:16)
+            WIRE 3568 1424 3904 1424
+            WIRE 3904 1424 4240 1424
+            BEGIN DISPLAY 3904 1424 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 4336 928 4240 928
+        BEGIN BRANCH XLXN_166(15:8)
+            WIRE 3584 928 3904 928
+            WIRE 3904 928 4240 928
+            BEGIN DISPLAY 3912 928 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 4336 448 4240 448
+        BEGIN BRANCH XLXN_166(7:0)
+            WIRE 3584 448 3904 448
+            WIRE 3904 448 4240 448
+            BEGIN DISPLAY 3912 448 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH XLXN_178
+            WIRE 3120 1824 3184 1824
+            WIRE 3120 1824 3120 2048
+            WIRE 3120 2048 3712 2048
+            WIRE 3568 1360 3712 1360
+            WIRE 3712 1360 3712 2048
+        END BRANCH
+        BUSTAP 3792 1696 3696 1696
+        BEGIN BRANCH XLXN_140(31:24)
+            WIRE 3568 1696 3632 1696
+            WIRE 3632 1696 3696 1696
+            BEGIN DISPLAY 3632 1696 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH XLXN_180(63:0)
+            WIRE 4816 144 4816 512
+            WIRE 4816 512 4816 992
+            WIRE 4816 992 4816 1488
+            WIRE 4816 1488 4816 1952
+            WIRE 4816 1952 4816 2464
+            WIRE 4816 2464 4816 2976
+            WIRE 4816 2976 4816 3456
+            WIRE 4816 3456 4816 3952
+            WIRE 4816 3952 4816 4400
+            WIRE 4816 4400 4944 4400
+        END BRANCH
+        BUSTAP 4816 3952 4720 3952
+        BEGIN BRANCH XLXN_180(63:56)
+            WIRE 3568 3952 4144 3952
+            WIRE 4144 3952 4656 3952
+            WIRE 4656 3952 4720 3952
+            WIRE 4656 3920 4912 3920
+            WIRE 4656 3920 4656 3952
+            BEGIN DISPLAY 4144 3952 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 4816 3456 4720 3456
+        BEGIN BRANCH XLXN_180(55:48)
+            WIRE 3568 3456 4144 3456
+            WIRE 4144 3456 4608 3456
+            WIRE 4608 3456 4720 3456
+            WIRE 4608 3424 4928 3424
+            WIRE 4608 3424 4608 3456
+            BEGIN DISPLAY 4144 3456 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 4816 2976 4720 2976
+        BEGIN BRANCH XLXN_180(47:40)
+            WIRE 3568 2976 4144 2976
+            WIRE 4144 2976 4608 2976
+            WIRE 4608 2976 4720 2976
+            WIRE 4608 2944 4896 2944
+            WIRE 4608 2944 4608 2976
+            BEGIN DISPLAY 4144 2976 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 4816 2464 4720 2464
+        BEGIN BRANCH XLXN_180(39:32)
+            WIRE 3568 2464 4144 2464
+            WIRE 4144 2464 4624 2464
+            WIRE 4624 2464 4720 2464
+            WIRE 4624 2416 4912 2416
+            WIRE 4624 2416 4624 2464
+            BEGIN DISPLAY 4144 2464 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 4816 1952 4720 1952
+        BEGIN BRANCH XLXN_180(31:24)
+            WIRE 3568 1952 4144 1952
+            WIRE 4144 1952 4624 1952
+            WIRE 4624 1952 4720 1952
+            WIRE 4624 1904 4912 1904
+            WIRE 4624 1904 4624 1952
+            BEGIN DISPLAY 4144 1952 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BUSTAP 4816 1488 4720 1488
+        BUSTAP 4816 992 4720 992
+        BUSTAP 4816 512 4720 512
+        BEGIN BRANCH ShiftA(6)
+            WIRE 672 800 736 800
+            WIRE 736 800 800 800
+            WIRE 800 800 800 832
+            WIRE 800 832 880 832
+            BEGIN DISPLAY 736 800 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH ALUOp(3:0)
+            WIRE 528 4528 688 4528
+            WIRE 688 4528 800 4528
+        END BRANCH
+        IOMARKER 528 4528 ALUOp(3:0) R180 28
+        BEGIN INSTANCE XLXI_52 800 4496 R0
+        END INSTANCE
+        BEGIN BRANCH XLXN_194
+            WIRE 1184 4528 5392 4528
+            WIRE 5392 4464 5392 4528
+            WIRE 5392 4464 5456 4464
+        END BRANCH
+        BEGIN BRANCH XLXN_195
+            WIRE 1184 4592 2528 4592
+            WIRE 2528 4464 2528 4592
+            WIRE 2528 4464 3888 4464
+        END BRANCH
+        BEGIN BRANCH XLXN_196
+            WIRE 1184 4656 4864 4656
+            WIRE 4864 4464 4864 4656
+            WIRE 4864 4464 4944 4464
+        END BRANCH
+        BEGIN BRANCH XLXN_197
+            WIRE 1184 4720 4336 4720
+            WIRE 4336 4464 4336 4720
+            WIRE 4336 4464 4416 4464
+        END BRANCH
+        BEGIN BRANCH B_actual(63:0)
+            WIRE 2048 1120 2160 1120
+            WIRE 2160 1120 2256 1120
+            BEGIN DISPLAY 2160 1120 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH XLXN_201
+            WIRE 1184 4272 2272 4272
+            WIRE 1584 1184 1664 1184
+            WIRE 1584 1184 1584 1536
+            WIRE 1584 1536 2272 1536
+            WIRE 2272 1536 2272 4272
+            WIRE 2272 384 3200 384
+            WIRE 2272 384 2272 1536
+        END BRANCH
+        BEGIN BRANCH B(63:0)
+            WIRE 320 1120 480 1120
+            WIRE 480 1120 480 1184
+            WIRE 480 1184 608 1184
+            WIRE 480 1072 480 1120
+            WIRE 480 1072 1056 1072
+            WIRE 1056 1072 1056 1120
+            WIRE 1056 1120 1120 1120
+        END BRANCH
+        BEGIN INSTANCE XLXI_17 608 1280 R0
+        END INSTANCE
+        BEGIN BRANCH ShiftB(5:0)
+            WIRE 512 1120 544 1120
+            WIRE 544 1120 608 1120
+            BEGIN DISPLAY 544 1120 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH ShiftB(6)
+            WIRE 320 1344 368 1344
+            WIRE 368 1344 464 1344
+            WIRE 464 1312 608 1312
+            WIRE 464 1312 464 1344
+            BEGIN DISPLAY 368 1344 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 320 1120 B(63:0) R180 28
+        BEGIN INSTANCE XLXI_54 1120 1280 R0
+        END INSTANCE
+        BEGIN BRANCH XLXN_206(63:0)
+            WIRE 992 1120 1040 1120
+            WIRE 1040 1120 1040 1184
+            WIRE 1040 1184 1120 1184
+        END BRANCH
+        BEGIN BRANCH XLXN_207(63:0)
+            WIRE 1504 1120 1664 1120
+        END BRANCH
+        BEGIN BRANCH XLXN_208
+            WIRE 1104 1024 1104 1248
+            WIRE 1104 1248 1120 1248
+            WIRE 1104 1024 1568 1024
+            WIRE 1568 1024 1568 4912
+            WIRE 1184 4912 1568 4912
+        END BRANCH
+        BEGIN BRANCH byte_select(7:0)
+            WIRE 480 3232 816 3232
+        END BRANCH
+        IOMARKER 480 3232 byte_select(7:0) R180 28
+        BEGIN BRANCH XLXN_180(23:16)
+            WIRE 3568 1488 4144 1488
+            WIRE 4144 1488 4624 1488
+            WIRE 4624 1488 4656 1488
+            WIRE 4656 1488 4720 1488
+            WIRE 4656 1440 4912 1440
+            WIRE 4656 1440 4656 1488
+            BEGIN DISPLAY 4144 1488 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH XLXN_180(15:8)
+            WIRE 3584 992 4144 992
+            WIRE 4144 992 4640 992
+            WIRE 4640 992 4656 992
+            WIRE 4656 992 4720 992
+            WIRE 4640 944 4896 944
+            WIRE 4640 944 4640 992
+            BEGIN DISPLAY 4152 992 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH XLXN_180(7:0)
+            WIRE 3584 512 4144 512
+            WIRE 4144 512 4640 512
+            WIRE 4640 512 4656 512
+            WIRE 4656 512 4720 512
+            WIRE 4656 448 4912 448
+            WIRE 4656 448 4656 512
+            BEGIN DISPLAY 4152 512 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN INSTANCE XLXI_64 4912 544 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_65 4896 1040 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_66 4912 1536 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_67 4912 2000 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_68 4912 2512 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_69 4896 3040 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_70 4928 3520 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_71 4912 4016 R0
+        END INSTANCE
+        BEGIN BRANCH byte_select(0)
+            WIRE 4848 512 4880 512
+            WIRE 4880 512 4912 512
+            BEGIN DISPLAY 4880 512 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH byte_select(1)
+            WIRE 4864 1008 4880 1008
+            WIRE 4880 1008 4896 1008
+            BEGIN DISPLAY 4880 1008 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH byte_select(2)
+            WIRE 4848 1504 4896 1504
+            WIRE 4896 1504 4912 1504
+            BEGIN DISPLAY 4896 1504 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH byte_select(3)
+            WIRE 4848 1968 4880 1968
+            WIRE 4880 1968 4912 1968
+            BEGIN DISPLAY 4880 1968 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH byte_select(7)
+            WIRE 4848 3984 4880 3984
+            WIRE 4880 3984 4912 3984
+            BEGIN DISPLAY 4880 3984 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH byte_select(6)
+            WIRE 4864 3488 4896 3488
+            WIRE 4896 3488 4928 3488
+            BEGIN DISPLAY 4896 3488 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH byte_select(5)
+            WIRE 4848 3008 4880 3008
+            WIRE 4880 3008 4896 3008
+            BEGIN DISPLAY 4880 3008 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH byte_select(4)
+            WIRE 4848 2480 4880 2480
+            WIRE 4880 2480 4912 2480
+            BEGIN DISPLAY 4880 2480 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH XLXN_237
+            WIRE 1184 4784 1632 4784
+            WIRE 1632 4784 1632 4912
+            WIRE 1632 4912 1664 4912
+            WIRE 1632 4784 4912 4784
+            WIRE 4848 576 4848 1072
+            WIRE 4848 1072 4864 1072
+            WIRE 4864 1072 4896 1072
+            WIRE 4864 1072 4864 1568
+            WIRE 4864 1568 4912 1568
+            WIRE 4864 1568 4864 2032
+            WIRE 4864 2032 4912 2032
+            WIRE 4864 2032 4864 2544
+            WIRE 4864 2544 4912 2544
+            WIRE 4864 2544 4864 3104
+            WIRE 4864 3104 4912 3104
+            WIRE 4912 3104 4912 3584
+            WIRE 4912 3584 4928 3584
+            WIRE 4928 3584 4928 3824
+            WIRE 4848 576 4912 576
+            WIRE 4864 3824 4864 4080
+            WIRE 4864 4080 4912 4080
+            WIRE 4912 4080 4912 4784
+            WIRE 4864 3824 4928 3824
+            WIRE 4896 3072 4912 3072
+            WIRE 4912 3072 4912 3104
+            WIRE 4912 4048 4912 4080
+            WIRE 4928 3552 4928 3584
+        END BRANCH
+        BEGIN BRANCH Overflow
+            WIRE 3568 3824 3632 3824
+            WIRE 3632 3744 3632 3824
+            WIRE 3632 3744 6464 3744
+            WIRE 6464 1120 6624 1120
+            WIRE 6464 1120 6464 3744
+        END BRANCH
+        IOMARKER 6624 640 O(63:0) R0 28
+        IOMARKER 6624 1120 Overflow R0 28
+        INSTANCE XLXI_72 5632 960 R0
+        BEGIN BRANCH XLXN_240
+            WIRE 5296 448 5632 448
+        END BRANCH
+        BEGIN BRANCH XLXN_241
+            WIRE 5280 944 5456 944
+            WIRE 5456 512 5456 944
+            WIRE 5456 512 5632 512
+        END BRANCH
+        BEGIN BRANCH XLXN_242
+            WIRE 5296 1440 5472 1440
+            WIRE 5472 576 5472 1440
+            WIRE 5472 576 5632 576
+        END BRANCH
+        BEGIN BRANCH XLXN_243
+            WIRE 5296 1904 5488 1904
+            WIRE 5488 640 5488 1904
+            WIRE 5488 640 5632 640
+        END BRANCH
+        BEGIN BRANCH XLXN_244
+            WIRE 5296 2416 5504 2416
+            WIRE 5504 704 5504 2416
+            WIRE 5504 704 5632 704
+        END BRANCH
+        BEGIN BRANCH XLXN_245
+            WIRE 5280 2944 5520 2944
+            WIRE 5520 768 5520 2944
+            WIRE 5520 768 5632 768
+        END BRANCH
+        BEGIN BRANCH XLXN_246
+            WIRE 5312 3424 5536 3424
+            WIRE 5536 832 5536 3424
+            WIRE 5536 832 5632 832
+        END BRANCH
+        BEGIN BRANCH XLXN_247
+            WIRE 5296 3920 5632 3920
+            WIRE 5632 896 5632 3920
+        END BRANCH
+        BEGIN BRANCH O(63:0)
+            WIRE 5840 4336 6064 4336
+            WIRE 6064 4336 6448 4336
+            WIRE 6448 4336 6544 4336
+            WIRE 6464 640 6624 640
+            WIRE 6464 640 6464 1056
+            WIRE 6464 1056 6544 1056
+            WIRE 6544 1056 6544 4336
+        END BRANCH
+        BEGIN BRANCH EQ
+            WIRE 5888 672 6144 672
+        END BRANCH
+        IOMARKER 6144 672 EQ R0 28
+    END SHEET
+END SCHEMATIC

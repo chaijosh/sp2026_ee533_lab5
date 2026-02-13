@@ -1,0 +1,1 @@
+sch2verilog -intstyle ise -family virtex2p   -w "Z:/VM_Share/533_lab5/alu_64/mux32b.sch" mux32b.vf

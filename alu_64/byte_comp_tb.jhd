@@ -1,0 +1,3 @@
+MODULE byte_comp_tb
+SUBMODULE byte_comp_mask
+INSTANCE UUT

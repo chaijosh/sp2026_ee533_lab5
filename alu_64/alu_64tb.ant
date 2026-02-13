@@ -1,0 +1,162 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 10.1
+//  \   \         Application : ISE
+//  /   /         Filename : alu_64tb.ant
+// /___/   /\     Timestamp : Fri Feb 13 10:18:19 2026
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: alu_64tb
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module alu_64tb;
+    reg [63:0] A = 64'b0000000000000000000000000000000000000000000000000000000000000000;
+    reg [3:0] ALUOp = 4'b0000;
+    reg [63:0] B = 64'b0000000000000000000000000000000000000000000000000000000000000000;
+    reg [7:0] byte_select = 8'b00000000;
+    reg [6:0] ShiftA = 7'b0000000;
+    reg [6:0] ShiftB = 7'b0000000;
+    wire EQ;
+    wire [63:0] O;
+    wire Overflow;
+
+
+    alu_64 UUT (
+        .A(A),
+        .ALUOp(ALUOp),
+        .B(B),
+        .byte_select(byte_select),
+        .ShiftA(ShiftA),
+        .ShiftB(ShiftB),
+        .EQ(EQ),
+        .O(O),
+        .Overflow(Overflow));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process
+        #0;
+        ANNOTATE_EQ;
+        ANNOTATE_O;
+        ANNOTATE_Overflow;
+        forever begin
+            #50;
+            ANNOTATE_EQ;
+            ANNOTATE_O;
+            ANNOTATE_Overflow;
+            #50;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("\\\\vmware-host\\shared folders\\VM_Share\\533_lab5\\alu_64\\alu_64tb.ano");
+        #4000 // Final time:  4000 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+        // -------------  Current Time:  100ns
+        #100;
+        A = 64'b0000111100001111000011110000111100001111000011110000111100001111;
+        ShiftA = 7'b0000100;
+        // -------------------------------------
+        // -------------  Current Time:  200ns
+        #100;
+        B = 64'b1111000011110000111100001111000011110000111100001111000011110000;
+        // -------------------------------------
+        // -------------  Current Time:  300ns
+        #100;
+        A = 64'b0000111100001111000011110000111100001111000011110001111100001111;
+        // -------------------------------------
+        // -------------  Current Time:  400ns
+        #100;
+        A = 64'b1111000011110000111100001111000011110000111100001111000011110000;
+        ALUOp = 4'b0001;
+        B = 64'b1111000011110000111100001111000000000000000000000000000000000000;
+        // -------------------------------------
+        // -------------  Current Time:  500ns
+        #100;
+        B = 64'b0111000011110000111100001111000000000000000000000000000000000000;
+        // -------------------------------------
+        // -------------  Current Time:  600ns
+        #100;
+        ALUOp = 4'b1001;
+        B = 64'b1111000011110000111100001111000000000000000000000000000000000000;
+        // -------------------------------------
+        // -------------  Current Time:  700ns
+        #100;
+        ALUOp = 4'b1000;
+        // -------------------------------------
+        // -------------  Current Time:  800ns
+        #100;
+        ALUOp = 4'b0101;
+        B = 64'b0000000100000001000000010000000100000001000000010000000100000001;
+        // -------------------------------------
+        // -------------  Current Time:  900ns
+        #100;
+        ALUOp = 4'b0110;
+        B = 64'b1111000011110000111100001111000011110000111100001111000011110000;
+        // -------------------------------------
+        // -------------  Current Time:  1000ns
+        #100;
+        ALUOp = 4'b0111;
+        // -------------------------------------
+        // -------------  Current Time:  1100ns
+        #100;
+        ALUOp = 4'b0010;
+        // -------------------------------------
+        // -------------  Current Time:  1300ns
+        #200;
+        ALUOp = 4'b0011;
+        ShiftB = 7'b0000010;
+        // -------------------------------------
+        // -------------  Current Time:  1400ns
+        #100;
+        ShiftB = 7'b0000100;
+        // -------------------------------------
+        // -------------  Current Time:  1500ns
+        #100;
+        ALUOp = 4'b0100;
+        B = 64'b1111000000000000000000000000000011110000000000000000000000000000;
+        byte_select = 8'b01000100;
+    end
+
+    task ANNOTATE_EQ;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,EQ,%b]", $time, EQ);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_O;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,O,%b]", $time, O);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_Overflow;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,Overflow,%b]", $time, Overflow);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+endmodule
+
