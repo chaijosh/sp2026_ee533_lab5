@@ -6,7 +6,6 @@ BEGIN SCHEMATIC
         EDITTRAIT all:0
     END ATTR
     BEGIN NETLIST
-        SIGNAL A
         SIGNAL B
         SIGNAL S
         SIGNAL CO
@@ -14,12 +13,13 @@ BEGIN SCHEMATIC
         SIGNAL XLXN_9
         SIGNAL XLXN_10
         SIGNAL CI
-        SIGNAL XLXN_15
         SIGNAL ALU_or
-        SIGNAL XLXN_17
         SIGNAL XLXN_18
         SIGNAL ALU_xnor
-        PORT Input A
+        SIGNAL A
+        SIGNAL XLXN_19
+        SIGNAL XLXN_20
+        SIGNAL XLXN_21
         PORT Input B
         PORT Output S
         PORT Output CO
@@ -27,6 +27,7 @@ BEGIN SCHEMATIC
         PORT Input CI
         PORT Output ALU_or
         PORT Output ALU_xnor
+        PORT Input A
         BEGIN BLOCKDEF and2
             TIMESTAMP 2000 1 1 10 10 10
             LINE N 0 -64 64 -64 
@@ -114,39 +115,26 @@ BEGIN SCHEMATIC
             PIN I2 ALU_and
             PIN O CO
         END BLOCK
-        BEGIN BLOCK XLXI_7 or2
-            PIN I0 A
-            PIN I1 A
-            PIN O ALU_or
-        END BLOCK
         BEGIN BLOCK XLXI_8 inv
             PIN I XLXN_18
             PIN O ALU_xnor
         END BLOCK
+        BEGIN BLOCK XLXI_9 or2
+            PIN I0 B
+            PIN I1 A
+            PIN O ALU_or
+        END BLOCK
     END NETLIST
     BEGIN SHEET 1 3520 2720
-        BEGIN BRANCH A
-            WIRE 704 848 864 848
-            WIRE 864 848 864 1216
-            WIRE 864 1216 896 1216
-            WIRE 896 1216 1248 1216
-            WIRE 832 1216 864 1216
-            WIRE 832 1216 832 1424
-            WIRE 832 1424 1296 1424
-            WIRE 864 304 1344 304
-            WIRE 1344 304 1360 304
-            WIRE 864 304 864 640
-            WIRE 864 640 1312 640
-            WIRE 864 640 864 848
-            WIRE 896 368 896 1216
-            WIRE 896 368 1360 368
-        END BRANCH
         BEGIN BRANCH B
             WIRE 704 1328 864 1328
             WIRE 864 1328 896 1328
-            WIRE 896 1328 1088 1328
+            WIRE 896 1328 1008 1328
+            WIRE 1008 1328 1088 1328
             WIRE 1088 1328 1088 1744
             WIRE 1088 1744 1280 1744
+            WIRE 1008 192 1360 192
+            WIRE 1008 192 1008 1328
             WIRE 1088 704 1312 704
             WIRE 1088 704 1088 1312
             WIRE 1088 1312 1088 1328
@@ -202,8 +190,11 @@ BEGIN SCHEMATIC
             WIRE 1696 1136 2192 1136
             WIRE 1696 1136 1696 1248
         END BRANCH
-        INSTANCE XLXI_7 1360 432 R0
         BEGIN BRANCH ALU_or
+            WIRE 1616 160 1680 160
+            WIRE 1680 160 1680 272
+            WIRE 1616 272 1680 272
+            WIRE 1616 272 1616 336
             WIRE 1616 336 2064 336
         END BRANCH
         IOMARKER 2064 336 ALU_or R0 28
@@ -219,5 +210,26 @@ BEGIN SCHEMATIC
             WIRE 2256 640 2592 640
         END BRANCH
         IOMARKER 2592 640 ALU_xnor R0 28
+        BEGIN BRANCH A
+            WIRE 704 848 864 848
+            WIRE 864 848 864 1216
+            WIRE 864 1216 896 1216
+            WIRE 896 1216 1248 1216
+            WIRE 832 1216 864 1216
+            WIRE 832 1216 832 1424
+            WIRE 832 1424 1296 1424
+            WIRE 864 304 1344 304
+            WIRE 1344 304 1360 304
+            WIRE 864 304 864 640
+            WIRE 864 640 1312 640
+            WIRE 864 640 864 848
+            WIRE 896 368 896 1216
+            WIRE 896 368 1360 368
+            WIRE 1296 128 1360 128
+            WIRE 1296 128 1296 272
+            WIRE 1296 272 1360 272
+            WIRE 1360 272 1360 304
+        END BRANCH
+        INSTANCE XLXI_9 1360 256 R0
     END SHEET
 END SCHEMATIC

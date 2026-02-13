@@ -7,7 +7,7 @@
 // \   \   \/     Version : 10.1
 //  \   \         Application : sch2verilog
 //  /   /         Filename : alu_1b.vf
-// /___/   /\     Timestamp : 02/13/2026 09:17:14
+// /___/   /\     Timestamp : 02/13/2026 15:55:27
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -63,9 +63,9 @@ module alu_1b(A,
                .I1(XLXN_9), 
                .I2(ALU_and_DUMMY), 
                .O(CO));
-   OR2 XLXI_7 (.I0(A), 
-               .I1(A), 
-               .O(ALU_or));
    INV XLXI_8 (.I(XLXN_18), 
                .O(ALU_xnor));
+   OR2 XLXI_9 (.I0(B), 
+               .I1(A), 
+               .O(ALU_or));
 endmodule

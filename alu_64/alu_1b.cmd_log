@@ -1,1 +1,2 @@
 sch2verilog -intstyle ise -family virtex2p   -w "Z:/VM_Share/533_lab5/alu_64/alu_1b.sch" alu_1b.vf
+sch2verilog -intstyle ise -family virtex2p   -w "Z:/VM_Share/533_lab5/alu_64/alu_1b.sch" alu_1b.vf
