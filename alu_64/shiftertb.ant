@@ -1,0 +1,76 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2003 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 10.1
+//  \   \         Application : ISE
+//  /   /         Filename : shiftertb.ant
+// /___/   /\     Timestamp : Fri Feb 13 16:14:02 2026
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: shiftertb
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module shiftertb;
+    reg [5:0] shamt = 6'b000000;
+    reg [63:0] A = 64'b0000000000000000000000000000000000000000000000000000000000000000;
+    wire [63:0] O;
+    reg shcode = 1'b0;
+
+
+    shifter UUT (
+        .shamt(shamt),
+        .A(A),
+        .O(O),
+        .shcode(shcode));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process
+        #0;
+        ANNOTATE_O;
+        forever begin
+            #50;
+            ANNOTATE_O;
+            #50;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("\\\\vmware-host\\shared folders\\VM_Share\\533_lab5\\alu_64\\shiftertb.ano");
+        #1000 // Final time:  1000 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+        // -------------  Current Time:  100ns
+        #100;
+        shamt = 6'b000110;
+        A = 64'b0000000000000000000000000000000011111111000000000000000000000000;
+        // -------------------------------------
+        // -------------  Current Time:  600ns
+        #500;
+        shcode = 1'b1;
+    end
+
+    task ANNOTATE_O;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,O,%b]", $time, O);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+endmodule
+

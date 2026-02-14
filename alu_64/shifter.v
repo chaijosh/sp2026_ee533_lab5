@@ -29,12 +29,12 @@ module shifter(
 	begin
 		if (shcode == 1'b0)
 		begin
-			O = O << shamt;
+			O = A << shamt;
 		end
 		
-		else if (shcode == 1'b1)
+		else
 		begin
-			O = O >> shamt;
+			O = A >> shamt;
 		end
 	
 	end
