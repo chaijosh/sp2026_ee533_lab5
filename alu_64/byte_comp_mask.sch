@@ -17,15 +17,11 @@ BEGIN SCHEMATIC
         SIGNAL A(0)
         SIGNAL XLXN_13
         SIGNAL mask
-        SIGNAL XLXN_14
         SIGNAL O
-        SIGNAL reg_comp
-        SIGNAL XLXN_22
         SIGNAL XLXN_23
         PORT Input A(7:0)
         PORT Input mask
         PORT Output O
-        PORT Input reg_comp
         BEGIN BLOCKDEF and8
             TIMESTAMP 2000 1 1 10 10 10
             LINE N 64 -64 64 -512 
@@ -54,17 +50,6 @@ BEGIN SCHEMATIC
             ARC N -40 -152 72 -40 48 -48 48 -144 
             ARC N 28 -224 204 -48 112 -48 192 -96 
         END BLOCKDEF
-        BEGIN BLOCKDEF or2
-            TIMESTAMP 2000 1 1 10 10 10
-            LINE N 0 -64 64 -64 
-            LINE N 0 -128 64 -128 
-            LINE N 256 -96 192 -96 
-            ARC N 28 -224 204 -48 112 -48 192 -96 
-            ARC N -40 -152 72 -40 48 -48 48 -144 
-            LINE N 112 -144 48 -144 
-            ARC N 28 -144 204 32 192 -96 112 -144 
-            LINE N 112 -48 48 -48 
-        END BLOCKDEF
         BEGIN BLOCK XLXI_1 and8
             PIN I0 A(0)
             PIN I1 A(1)
@@ -77,14 +62,9 @@ BEGIN SCHEMATIC
             PIN O XLXN_13
         END BLOCK
         BEGIN BLOCK XLXI_3 or2b1
-            PIN I0 XLXN_23
+            PIN I0 mask
             PIN I1 XLXN_13
             PIN O O
-        END BLOCK
-        BEGIN BLOCK XLXI_5 or2
-            PIN I0 reg_comp
-            PIN I1 mask
-            PIN O XLXN_23
         END BLOCK
     END NETLIST
     BEGIN SHEET 1 3520 2720
@@ -168,10 +148,14 @@ BEGIN SCHEMATIC
             END DISPLAY
         END BRANCH
         BEGIN BRANCH mask
-            WIRE 592 1696 752 1696
-            WIRE 752 1696 1360 1696
+            WIRE 592 1696 1360 1696
             WIRE 1360 1120 1360 1696
             WIRE 1360 1120 1616 1120
+            WIRE 1616 1120 1872 1120
+            WIRE 1872 1120 1872 1152
+            WIRE 1872 1152 1952 1152
+            WIRE 1952 1120 1952 1152
+            WIRE 1952 1120 2048 1120
         END BRANCH
         BEGIN BRANCH O
             WIRE 2304 1088 3008 1088
@@ -184,18 +168,6 @@ BEGIN SCHEMATIC
             WIRE 1312 896 1328 896
             WIRE 1328 896 1328 1056
             WIRE 1328 1056 2048 1056
-        END BRANCH
-        IOMARKER 544 1920 reg_comp R180 28
-        BEGIN BRANCH reg_comp
-            WIRE 544 1920 704 1920
-            WIRE 704 1184 1616 1184
-            WIRE 704 1184 704 1920
-        END BRANCH
-        INSTANCE XLXI_5 1616 1248 R0
-        BEGIN BRANCH XLXN_23
-            WIRE 1872 1152 1952 1152
-            WIRE 1952 1120 1952 1152
-            WIRE 1952 1120 2048 1120
         END BRANCH
     END SHEET
 END SCHEMATIC

@@ -11,7 +11,6 @@ BEGIN SCHEMATIC
         SIGNAL alu_and
         SIGNAL alu_xnor
         SIGNAL alu_or
-        SIGNAL sub
         SIGNAL alu_comp
         SIGNAL alu_shiftA
         SIGNAL alu_shiftB
@@ -20,16 +19,19 @@ BEGIN SCHEMATIC
         SIGNAL ALUOp(2)
         SIGNAL ALUOp(3)
         SIGNAL substr_comp
+        SIGNAL sub
+        SIGNAL XLXN_21
+        SIGNAL XLXN_22
         PORT Input ALUOp(3:0)
         PORT Output alu_shift_out
         PORT Output alu_and
         PORT Output alu_xnor
         PORT Output alu_or
-        PORT Output sub
         PORT Output alu_comp
         PORT Output alu_shiftA
         PORT Output alu_shiftB
         PORT Output substr_comp
+        PORT Output sub
         BEGIN BLOCKDEF and3b1
             TIMESTAMP 2000 1 1 10 10 10
             LINE N 0 -64 40 -64 
@@ -93,6 +95,17 @@ BEGIN SCHEMATIC
             LINE N 144 -80 64 -80 
             LINE N 64 -176 144 -176 
         END BLOCKDEF
+        BEGIN BLOCKDEF or2
+            TIMESTAMP 2000 1 1 10 10 10
+            LINE N 0 -64 64 -64 
+            LINE N 0 -128 64 -128 
+            LINE N 256 -96 192 -96 
+            ARC N 28 -224 204 -48 112 -48 192 -96 
+            ARC N -40 -152 72 -40 48 -48 48 -144 
+            LINE N 112 -144 48 -144 
+            ARC N 28 -144 204 32 192 -96 112 -144 
+            LINE N 112 -48 48 -48 
+        END BLOCKDEF
         BEGIN BLOCK XLXI_2 and3b1
             PIN I0 ALUOp(3)
             PIN I1 ALUOp(2)
@@ -120,13 +133,6 @@ BEGIN SCHEMATIC
             PIN I3 ALUOp(0)
             PIN O alu_or
         END BLOCK
-        BEGIN BLOCK XLXI_4 and4b3
-            PIN I0 ALUOp(3)
-            PIN I1 ALUOp(2)
-            PIN I2 ALUOp(1)
-            PIN I3 ALUOp(0)
-            PIN O sub
-        END BLOCK
         BEGIN BLOCK XLXI_11 gnd
             PIN G alu_shiftA
         END BLOCK
@@ -149,6 +155,24 @@ BEGIN SCHEMATIC
             PIN I2 ALUOp(3)
             PIN I3 ALUOp(2)
             PIN O substr_comp
+        END BLOCK
+        BEGIN BLOCK XLXI_16 and3b2
+            PIN I0 ALUOp(3)
+            PIN I1 ALUOp(2)
+            PIN I2 ALUOp(1)
+            PIN O XLXN_21
+        END BLOCK
+        BEGIN BLOCK XLXI_4 and4b3
+            PIN I0 ALUOp(3)
+            PIN I1 ALUOp(2)
+            PIN I2 ALUOp(1)
+            PIN I3 ALUOp(0)
+            PIN O XLXN_22
+        END BLOCK
+        BEGIN BLOCK XLXI_20 or2
+            PIN I0 XLXN_22
+            PIN I1 XLXN_21
+            PIN O sub
         END BLOCK
     END NETLIST
     BEGIN SHEET 1 3520 2720
@@ -178,14 +202,10 @@ BEGIN SCHEMATIC
         END BRANCH
         IOMARKER 2896 624 alu_or R0 28
         INSTANCE XLXI_9 2480 784 R0
-        BEGIN BRANCH sub
-            WIRE 1488 256 1504 256
-            WIRE 1504 256 1648 256
-        END BRANCH
-        INSTANCE XLXI_4 1232 416 R0
-        IOMARKER 1648 256 sub R0 28
         BEGIN BRANCH alu_comp
-            WIRE 2752 1664 2912 1664
+            WIRE 2752 1664 2784 1664
+            WIRE 2784 1664 2816 1664
+            WIRE 2816 1664 2912 1664
         END BRANCH
         IOMARKER 2912 1664 alu_comp R0 28
         BEGIN BRANCH alu_shiftA
@@ -199,34 +219,6 @@ BEGIN SCHEMATIC
         IOMARKER 2896 2496 alu_shiftB R0 28
         INSTANCE XLXI_12 2496 1792 R0
         INSTANCE XLXI_13 2480 2656 R0
-        BEGIN BRANCH ALUOp(0)
-            WIRE 1104 160 1168 160
-            WIRE 1168 160 1232 160
-            BEGIN DISPLAY 1168 160 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH ALUOp(1)
-            WIRE 1104 224 1152 224
-            WIRE 1152 224 1232 224
-            BEGIN DISPLAY 1152 224 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH ALUOp(2)
-            WIRE 1104 288 1168 288
-            WIRE 1168 288 1232 288
-            BEGIN DISPLAY 1168 288 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH ALUOp(3)
-            WIRE 1104 352 1168 352
-            WIRE 1168 352 1232 352
-            BEGIN DISPLAY 1168 352 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
         BEGIN BRANCH ALUOp(0)
             WIRE 2336 176 2416 176
             WIRE 2416 176 2448 176
@@ -420,6 +412,83 @@ BEGIN SCHEMATIC
             BEGIN DISPLAY 1216 640 ATTR Name
                 ALIGNMENT SOFT-BCENTER
             END DISPLAY
+        END BRANCH
+        INSTANCE XLXI_16 1040 2224 R0
+        BEGIN BRANCH ALUOp(1)
+            WIRE 864 2032 944 2032
+            WIRE 944 2032 976 2032
+            WIRE 976 2032 1040 2032
+            BEGIN DISPLAY 944 2032 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH ALUOp(2)
+            WIRE 848 2096 944 2096
+            WIRE 944 2096 976 2096
+            WIRE 976 2096 1040 2096
+            BEGIN DISPLAY 944 2096 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH ALUOp(3)
+            WIRE 864 2160 928 2160
+            WIRE 928 2160 976 2160
+            WIRE 976 2160 1040 2160
+            BEGIN DISPLAY 928 2160 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        INSTANCE XLXI_4 1056 2560 R0
+        BEGIN BRANCH ALUOp(0)
+            WIRE 928 2304 992 2304
+            WIRE 992 2304 1008 2304
+            WIRE 1008 2304 1056 2304
+            BEGIN DISPLAY 1008 2304 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH ALUOp(1)
+            WIRE 928 2368 976 2368
+            WIRE 976 2368 992 2368
+            WIRE 992 2368 1056 2368
+            BEGIN DISPLAY 992 2368 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH ALUOp(2)
+            WIRE 928 2432 976 2432
+            WIRE 976 2432 992 2432
+            WIRE 992 2432 1056 2432
+            BEGIN DISPLAY 976 2432 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH ALUOp(3)
+            WIRE 928 2496 992 2496
+            WIRE 992 2496 1056 2496
+            BEGIN DISPLAY 992 2496 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        INSTANCE XLXI_20 1440 2384 R0
+        BEGIN BRANCH sub
+            WIRE 1696 2288 1728 2288
+            WIRE 1728 2288 1728 2464
+            WIRE 1728 2464 1744 2464
+            WIRE 1744 2464 1760 2464
+            WIRE 1760 2464 1792 2464
+            WIRE 1792 2464 1888 2464
+        END BRANCH
+        IOMARKER 1888 2464 sub R0 28
+        BEGIN BRANCH XLXN_21
+            WIRE 1296 2096 1360 2096
+            WIRE 1360 2096 1360 2256
+            WIRE 1360 2256 1440 2256
+        END BRANCH
+        BEGIN BRANCH XLXN_22
+            WIRE 1312 2400 1376 2400
+            WIRE 1376 2320 1376 2400
+            WIRE 1376 2320 1440 2320
         END BRANCH
     END SHEET
 END SCHEMATIC

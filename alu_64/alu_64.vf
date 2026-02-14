@@ -7,7 +7,7 @@
 // \   \   \/     Version : 10.1
 //  \   \         Application : sch2verilog
 //  /   /         Filename : alu_64.vf
-// /___/   /\     Timestamp : 02/13/2026 09:47:49
+// /___/   /\     Timestamp : 02/13/2026 19:53:07
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -86,9 +86,9 @@ module alu_64(A,
               byte_select, 
               ShiftA, 
               ShiftB, 
-              EQ, 
               O, 
-              Overflow);
+              Overflow, 
+              Z);
 
     input [63:0] A;
     input [3:0] ALUOp;
@@ -96,18 +96,25 @@ module alu_64(A,
     input [7:0] byte_select;
     input [6:0] ShiftA;
     input [6:0] ShiftB;
-   output EQ;
    output [63:0] O;
    output Overflow;
+   output Z;
    
    wire [63:0] A_s;
    wire [63:0] B_actual;
+   wire substr_eq_0;
+   wire substr_eq_1;
+   wire substr_eq_2;
+   wire substr_eq_3;
+   wire substr_eq_4;
+   wire substr_eq_5;
+   wire substr_eq_6;
+   wire substr_eq_7;
    wire XLXN_17;
    wire XLXN_18;
    wire XLXN_21;
    wire XLXN_22;
    wire XLXN_23;
-   wire XLXN_24;
    wire [63:0] XLXN_139;
    wire [63:0] XLXN_140;
    wire [63:0] XLXN_160;
@@ -124,16 +131,13 @@ module alu_64(A,
    wire [63:0] XLXN_206;
    wire [63:0] XLXN_207;
    wire XLXN_208;
-   wire XLXN_237;
-   wire XLXN_240;
-   wire XLXN_241;
-   wire XLXN_242;
-   wire XLXN_243;
-   wire XLXN_244;
-   wire XLXN_245;
-   wire XLXN_246;
-   wire XLXN_247;
+   wire XLXN_259;
+   wire XLXN_268;
+   wire XLXN_269;
+   wire XLXN_270;
+   wire [63:0] O_DUMMY;
    
+   assign O[63:0] = O_DUMMY[63:0];
    alu_8 XLXI_1 (.A(A[7:0]), 
                  .B(B_actual[7:0]), 
                  .CI(XLXN_201), 
@@ -188,16 +192,8 @@ module alu_64(A,
                  .alu_and(XLXN_140[55:48]), 
                  .alu_or(XLXN_166[55:48]), 
                  .alu_xnor(XLXN_180[55:48]), 
-                 .CO(XLXN_24), 
+                 .CO(XLXN_259), 
                  .S(XLXN_139[55:48]));
-   alu_8 XLXI_8 (.A(A[63:56]), 
-                 .B(B_actual[63:56]), 
-                 .CI(XLXN_24), 
-                 .alu_and(XLXN_140[63:56]), 
-                 .alu_or(XLXN_166[63:56]), 
-                 .alu_xnor(XLXN_180[63:56]), 
-                 .CO(Overflow), 
-                 .S(XLXN_139[63:56]));
    mux64b XLXI_10 (.A(XLXN_139[63:0]), 
                    .B(XLXN_140[63:0]), 
                    .S(XLXN_195), 
@@ -213,7 +209,7 @@ module alu_64(A,
    mux64b XLXI_13 (.A(XLXN_162[63:0]), 
                    .B(A_s[63:0]), 
                    .S(XLXN_194), 
-                   .O(O[63:0]));
+                   .O(O_DUMMY[63:0]));
    xor_64_1 XLXI_15 (.A(XLXN_207[63:0]), 
                      .B(XLXN_201), 
                      .O(B_actual[63:0]));
@@ -227,58 +223,65 @@ module alu_64(A,
                     .O(XLXN_206[63:0]));
    alu_op XLXI_52 (.ALUOp(ALUOp[3:0]), 
                    .alu_and(XLXN_195), 
-                   .alu_comp(XLXN_237), 
+                   .alu_comp(), 
                    .alu_or(XLXN_197), 
                    .alu_shiftA(), 
                    .alu_shiftB(XLXN_208), 
                    .alu_shift_out(XLXN_194), 
                    .alu_xnor(XLXN_196), 
                    .sub(XLXN_201), 
-                   .substr_comp());
+                   .substr_comp(XLXN_268));
    mux64b XLXI_54 (.A(B[63:0]), 
                    .B(XLXN_206[63:0]), 
                    .S(XLXN_208), 
                    .O(XLXN_207[63:0]));
    byte_comp_mask XLXI_64 (.A(XLXN_180[7:0]), 
                            .mask(byte_select[0]), 
-                           .reg_comp(XLXN_237), 
-                           .O(XLXN_240));
+                           .O(substr_eq_0));
    byte_comp_mask XLXI_65 (.A(XLXN_180[15:8]), 
                            .mask(byte_select[1]), 
-                           .reg_comp(XLXN_237), 
-                           .O(XLXN_241));
+                           .O(substr_eq_1));
    byte_comp_mask XLXI_66 (.A(XLXN_180[23:16]), 
                            .mask(byte_select[2]), 
-                           .reg_comp(XLXN_237), 
-                           .O(XLXN_242));
+                           .O(substr_eq_2));
    byte_comp_mask XLXI_67 (.A(XLXN_180[31:24]), 
                            .mask(byte_select[3]), 
-                           .reg_comp(XLXN_237), 
-                           .O(XLXN_243));
+                           .O(substr_eq_3));
    byte_comp_mask XLXI_68 (.A(XLXN_180[39:32]), 
                            .mask(byte_select[4]), 
-                           .reg_comp(XLXN_237), 
-                           .O(XLXN_244));
+                           .O(substr_eq_4));
    byte_comp_mask XLXI_69 (.A(XLXN_180[47:40]), 
                            .mask(byte_select[5]), 
-                           .reg_comp(XLXN_237), 
-                           .O(XLXN_245));
+                           .O(substr_eq_5));
    byte_comp_mask XLXI_70 (.A(XLXN_180[55:48]), 
                            .mask(byte_select[6]), 
-                           .reg_comp(XLXN_237), 
-                           .O(XLXN_246));
+                           .O(substr_eq_6));
    byte_comp_mask XLXI_71 (.A(XLXN_180[63:56]), 
                            .mask(byte_select[7]), 
-                           .reg_comp(XLXN_237), 
-                           .O(XLXN_247));
-   AND8_MXILINX_alu_64 XLXI_72 (.I0(XLXN_247), 
-                                .I1(XLXN_246), 
-                                .I2(XLXN_245), 
-                                .I3(XLXN_244), 
-                                .I4(XLXN_243), 
-                                .I5(XLXN_242), 
-                                .I6(XLXN_241), 
-                                .I7(XLXN_240), 
-                                .O(EQ));
+                           .O(substr_eq_7));
+   AND8_MXILINX_alu_64 XLXI_72 (.I0(substr_eq_7), 
+                                .I1(substr_eq_6), 
+                                .I2(substr_eq_5), 
+                                .I3(substr_eq_4), 
+                                .I4(substr_eq_3), 
+                                .I5(substr_eq_2), 
+                                .I6(substr_eq_1), 
+                                .I7(substr_eq_0), 
+                                .O(XLXN_269));
    // synthesis attribute HU_SET of XLXI_72 is "XLXI_72_0"
+   alu_8_overflow XLXI_74 (.A(A[63:56]), 
+                           .B(B_actual[63:56]), 
+                           .CI(XLXN_259), 
+                           .alu_and(XLXN_140[63:56]), 
+                           .alu_or(XLXN_166[63:56]), 
+                           .alu_xnor(XLXN_180[63:56]), 
+                           .CO(), 
+                           .Overflow(Overflow), 
+                           .S(XLXN_139[63:56]));
+   zero XLXI_75 (.A(O_DUMMY[63:0]), 
+                 .Z(XLXN_270));
+   MUXF5 XLXI_78 (.I0(XLXN_270), 
+                  .I1(XLXN_269), 
+                  .S(XLXN_268), 
+                  .O(Z));
 endmodule

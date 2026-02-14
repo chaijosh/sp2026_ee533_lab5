@@ -7,7 +7,7 @@
 // \   \   \/     Version : 10.1
 //  \   \         Application : sch2verilog
 //  /   /         Filename : byte_comp_mask.vf
-// /___/   /\     Timestamp : 02/13/2026 09:17:26
+// /___/   /\     Timestamp : 02/13/2026 19:21:00
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -82,16 +82,13 @@ endmodule
 
 module byte_comp_mask(A, 
                       mask, 
-                      reg_comp, 
                       O);
 
     input [7:0] A;
     input mask;
-    input reg_comp;
    output O;
    
    wire XLXN_13;
-   wire XLXN_23;
    
    AND8_MXILINX_byte_comp_mask XLXI_1 (.I0(A[0]), 
                                        .I1(A[1]), 
@@ -103,10 +100,7 @@ module byte_comp_mask(A,
                                        .I7(A[7]), 
                                        .O(XLXN_13));
    // synthesis attribute HU_SET of XLXI_1 is "XLXI_1_0"
-   OR2B1 XLXI_3 (.I0(XLXN_23), 
+   OR2B1 XLXI_3 (.I0(mask), 
                  .I1(XLXN_13), 
                  .O(O));
-   OR2 XLXI_5 (.I0(reg_comp), 
-               .I1(mask), 
-               .O(XLXN_23));
 endmodule

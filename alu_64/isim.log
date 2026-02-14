@@ -1,30 +1,38 @@
 Command line:
-   ./byte_comp_tb_isim_beh.exe
+   ./alu_64tb_isim_beh.exe
      -intstyle  ise
      -ipchost  localhost
-     -ipcport  1053
+     -ipcport  1120
 
-Fri Feb 13 10:33:14 2026
+Fri Feb 13 19:57:56 2026
 
-Total Line Count : 26
+Total Line Count : 1471
 
- Elaboration Time: 0.03125 sec
+ Elaboration Time: 0.15625 sec
 
- Current Memory Usage: 141.418 Meg
+ Current Memory Usage: 147.718 Meg
 
- Total Signals          : 63
- Total Nets             : 26
- Total Signal Drivers   : 13
- Total Blocks           : 12
- Total Primitive Blocks : 9
- Total Processes        : 16
- Total Traceable Variables  : 20
- Total Scalar Nets and Variables : 115
-ntrace select -o on -n /byte_comp_tb/O 
-ntrace select -o on -n /byte_comp_tb/A 
-ntrace select -o on -n /byte_comp_tb/mask 
-ntrace select -o on -n /byte_comp_tb/reg_comp 
+ Total Signals          : 4735
+ Total Nets             : 1410
+ Total Signal Drivers   : 1059
+ Total Blocks           : 1133
+ Total Primitive Blocks : 975
+ Total Processes        : 1385
+ Total Traceable Variables  : 346
+ Total Scalar Nets and Variables : 2092
+ntrace select -o on -n /alu_64tb/EQ 
+ntrace select -o on -n /alu_64tb/O 
+ntrace select -o on -n /alu_64tb/Overflow 
+ntrace select -o on -n /alu_64tb/A 
+ntrace select -o on -n /alu_64tb/ALUOp 
+ntrace select -o on -n /alu_64tb/B 
+ntrace select -o on -n /alu_64tb/byte_select 
+ntrace select -o on -n /alu_64tb/ShiftA 
+ntrace select -o on -n /alu_64tb/ShiftB 
+ntrace select -o on -n /alu_64tb/UUT/XLXI_52/alu_or 
+ntrace select -o on -n /alu_64tb/UUT/XLXN_180 
+ntrace select -o on -n /alu_64tb/UUT/Z 
 ntrace start 
-isimrun 4000 ns 
+isimrun 8000 ns 
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.

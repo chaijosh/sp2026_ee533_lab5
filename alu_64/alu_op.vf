@@ -7,7 +7,7 @@
 // \   \   \/     Version : 10.1
 //  \   \         Application : sch2verilog
 //  /   /         Filename : alu_op.vf
-// /___/   /\     Timestamp : 02/13/2026 09:17:16
+// /___/   /\     Timestamp : 02/13/2026 18:12:24
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -42,6 +42,8 @@ module alu_op(ALUOp,
    output sub;
    output substr_comp;
    
+   wire XLXN_21;
+   wire XLXN_22;
    
    AND3B1 XLXI_2 (.I0(ALUOp[3]), 
                   .I1(ALUOp[2]), 
@@ -51,7 +53,7 @@ module alu_op(ALUOp,
                   .I1(ALUOp[2]), 
                   .I2(ALUOp[1]), 
                   .I3(ALUOp[0]), 
-                  .O(sub));
+                  .O(XLXN_22));
    AND4B3 XLXI_6 (.I0(ALUOp[0]), 
                   .I1(ALUOp[1]), 
                   .I2(ALUOp[2]), 
@@ -82,4 +84,11 @@ module alu_op(ALUOp,
                    .I2(ALUOp[3]), 
                    .I3(ALUOp[2]), 
                    .O(substr_comp));
+   AND3B2 XLXI_16 (.I0(ALUOp[3]), 
+                   .I1(ALUOp[2]), 
+                   .I2(ALUOp[1]), 
+                   .O(XLXN_21));
+   OR2 XLXI_20 (.I0(XLXN_22), 
+                .I1(XLXN_21), 
+                .O(sub));
 endmodule

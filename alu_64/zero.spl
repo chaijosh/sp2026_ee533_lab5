@@ -1,0 +1,8 @@
+[Inputs]
+=A[63:0]=
+[Outputs]
+Z
+[BiDir]
+[ATTRIBUTES]
+VeriModel zero
+

@@ -1,1 +1,2 @@
 sch2verilog -intstyle ise -family virtex2p   -w "Z:/VM_Share/533_lab5/alu_64/byte_comp_mask.sch" byte_comp_mask.vf
+sch2verilog -intstyle ise -family virtex2p   -w "Z:/VM_Share/533_lab5/alu_64/byte_comp_mask.sch" byte_comp_mask.vf
