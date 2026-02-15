@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nf:module xmlns:nf="http://www.NetFPGA.org/NF2_register_system" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.NetFPGA.org/NF2_register_system NF2_register_system.xsd ">
+	<nf:name>pipeline_datapath</nf:name>
+	<nf:prefix>pipeline_datapath</nf:prefix>
+	<nf:location>udp</nf:location>
+	<nf:description>Registers for Pipeline CPU with Trace Buffer</nf:description>
+	<nf:blocksize>64</nf:blocksize>
+	<nf:registers>
+		<nf:register>
+		  <nf:name>sw_control_reg</nf:name>
+			<nf:description>Control Register. Bit 0: Force Reset. Bit 1: Enable Trace Capture.</nf:description>
+			<nf:type>generic_software32</nf:type>
+		</nf:register>
+
+		<nf:register>
+		  <nf:name>sw_trace_rd_addr</nf:name>
+			<nf:description>Address Pointer for reading the Trace Buffer history (0-511)</nf:description>
+			<nf:type>generic_software32</nf:type>
+		</nf:register>
+
+		<nf:register>
+		  <nf:name>trace_status</nf:name>
+			<nf:description>Trace Status. Bits [8:0]: Current Head Pointer. Bit 16: Buffer Full Flag.</nf:description>
+			<nf:type>generic_hardware32</nf:type>
+		</nf:register>
+
+		<nf:register>
+		  <nf:name>trace_pc_info</nf:name>
+			<nf:description>Trace Entry Part 1. Bits [31:23]: PC. Bits [22:18]: WB Addr. Bit [17]: WB Enable.</nf:description>
+			<nf:type>generic_hardware32</nf:type>
+		</nf:register>
+
+		<nf:register>
+		  <nf:name>trace_instr</nf:name>
+			<nf:description>Trace Entry Part 2. The 32-bit executed instruction.</nf:description>
+			<nf:type>generic_hardware32</nf:type>
+		</nf:register>
+
+		<nf:register>
+		  <nf:name>trace_wb_lo</nf:name>
+			<nf:description>Trace Entry Part 3. Lower 32 bits of the Writeback Data.</nf:description>
+			<nf:type>generic_hardware32</nf:type>
+		</nf:register>
+
+		<nf:register>
+		  <nf:name>trace_wb_hi</nf:name>
+			<nf:description>Trace Entry Part 4. Upper 32 bits of the Writeback Data.</nf:description>
+			<nf:type>generic_hardware32</nf:type>
+		</nf:register>
+
+	</nf:registers>
+</nf:module>
